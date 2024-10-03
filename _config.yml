@@ -6,9 +6,9 @@ repository: project-ocre/project-ocre.github.io
 theme: just-the-docs
 
 ### General
-favicon_ico: "favicon.ico"
+favicon_ico: "assets/favicon.ico"
 # Set a path/url to a logo that will be displayed instead of the title
-logo: "logo.png"
+logo: "/assets/logo.png"
 heading_anchors: true
 enable_copy_code_button: true
 permalink: pretty

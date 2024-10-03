@@ -1,0 +1,22 @@
+# This configuration file is used by the Lychee link checker to manage settings, including the exclusion of specific directories and files from being checked.
+# Directories and file paths to be excluded are specified under the 'exclude' setting, utilizing glob patterns for matching. This allows for more precise control over the scope of the link checking process.
+# Reference: https://github.com/lycheeverse/lychee?tab=readme-ov-file#ignoring-links
+
+# NOTE: For URL and URL pattern exclusions, please use ".lycheeignore"
+
+# Exclude filesystem paths from checking
+exclude_path = [
+	".git",
+	".github",
+	"_site",
+	"Gemfile",
+	"Gemfile.lock",
+	"package-lock.json"
+]
+
+# Max concurrency
+max_concurrency = 10
+
+# Cache settings
+cache = true
+max_cache_age = "1d"
