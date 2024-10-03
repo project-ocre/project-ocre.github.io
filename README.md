@@ -4,27 +4,26 @@
 ## Overview
 This repository contains the documentation for [Ocre](https://lfedge.org/projects/ocre/). This repo hosts the code for the Ocre docs site, which is separate from the main Ocre project repository.
 
-The live version of the documentation can be viewed at [https://example.com](https://example.com).
+The live version of the documentation can be viewed at: [https://example.com](https://example.com).
 
 ## Project Structure and Contribution Guidelines
 This documentation site was built using [Jekyll](https://jekyllrb.com/) and the [Just the Docs theme](https://just-the-docs.com/).
 
 ### Project File Structure
 ```
-.
-├── _docs/                # Documentation files (Markdown format) - main focus for contributors
-├── assets/               # Contains images, scripts, and other static assets
-├── _config.yml           # Site configuration file
-├── Gemfile               # Ruby dependencies for Jekyll
-├── Gemfile.lock          # Version lockfile for dependencies
-├── README.md             # The file you are reading right now
-└── _site/                # Auto-generated, do not edit directly (site build output)
+├── docs/                  # Contains all markdown files for documentation
+│   └── assets/            # Holds images, CSS, JS, etc. for the documentation
+├── _config.yml            # Jekyll configuration file, maintainers manage this
+├── Gemfile                # Dependencies for Jekyll site, maintainers manage this
+├── Gemfile.lock           # Locked dependencies, maintainers manage this
+├── README.md              # You're reading this file
+└── _site/                 # Auto-generated, do not edit directly (site build output)
 ```
 
 ### Key Guidelines for Contributors
-* **Documentation Location:** All content related to Ocre’s documentation lives in the `_docs` folder. If you're contributing, focus your efforts here.
-* **Editing Scope:** Contributors (who are not maintainers) should avoid editing files outside the `_docs` folder. The rest of the structure is primarily for configuration and assets that support the documentation.
-* **Assets:** Any images, scripts, or styles related to the documentation should be placed in the assets folder. When adding images, make sure to reference them correctly in your Markdown files.
+* **Documentation Location:** All content related to Ocre’s documentation lives in the `docs` folder. If you're contributing, focus your efforts here.
+* **Editing Scope:** Contributors (who are not maintainers) should avoid editing files outside the `docs` folder. The rest of the structure is primarily for configuration and assets that support the documentation.
+* **Assets:** Any images, scripts, or styles related to the documentation should be placed in the `assets` (a subdirectory of `docs`). When adding images, make sure to reference them correctly in your Markdown files.
 
 This structure and these guidelines help ensure the integrity and maintainability of the Ocre documentation site while allowing contributions to focus on content updates.
 
@@ -58,7 +57,7 @@ We encourage contributions to improve the documentation! If you’re looking to 
     ```bash
     git checkout -b feature/your-feature
     ```
-5. Make your changes. Rembmer to focus on the `_docs` folder for content updates.
+5. Make your changes. Rembmer to focus on the `docs` folder for content updates.
 6. Preview your changes locally by running:
     ```bash
     bundle exec jekyll serve
@@ -76,7 +75,7 @@ We encourage contributions to improve the documentation! If you’re looking to 
     git push origin feature/your-feature-name
     ```
 
-10. Go to the main [Ocre docs repository](https://github.com/project-ocre/project-ocre.github.io) and submit a pull request with a clear description of your changes.
+10. Go to the main [Ocre docs repository](https://github.com/project-ocre/project-ocre.github.io) and submit a [pull request](https://github.com/project-ocre/project-ocre.github.io/pulls) with a clear description of your changes.
 
 We'll review your contribution and get back to you as soon as possible. Thank you for helping improve the Ocre documentation!
 
