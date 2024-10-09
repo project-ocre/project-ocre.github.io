@@ -2,9 +2,9 @@
 
 
 ## Overview
-This repository contains the documentation for building, flashing, and using the [Ocre runtime](https://github.com/project-ocre/ocre-runtime). 
+This repository contains the raw source files for building and maintaining documentation for the [Ocre runtime](https://github.com/project-ocre/ocre-runtime) project. While this repository houses the content and structure, it's not intended for direct reading of the documentation. For the most up-to-date and user-friendly version of our docs, please visit our live site at: https://docs.project-ocre.org/
 
-The live version of the documentation can be viewed at: [https://docs.project-ocre.org/](https://docs.project-ocre.org/).
+Interested in contributing? Great! You'll find detailed contribution guidelines and setup instructions in the sections below.
 
 ## Project Structure and Contribution Guidelines
 This documentation site was built using [Jekyll](https://jekyllrb.com/) and the [Just the Docs theme](https://just-the-docs.com/).
