@@ -2,9 +2,9 @@
 
 
 ## Overview
-This repository contains the documentation for [Ocre](https://lfedge.org/projects/ocre/). This repo hosts the code for the Ocre docs site, which is separate from the main Ocre project repository.
+This repository contains the documentation for building, flashing, and using the [Ocre runtime](https://github.com/project-ocre/ocre-runtime). 
 
-The live version of the documentation can be viewed at: [https://example.com](https://example.com).
+The live version of the documentation can be viewed at: [https://docs.project-ocre.org/](https://docs.project-ocre.org/).
 
 ## Project Structure and Contribution Guidelines
 This documentation site was built using [Jekyll](https://jekyllrb.com/) and the [Just the Docs theme](https://just-the-docs.com/).
