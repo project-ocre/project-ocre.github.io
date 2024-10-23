@@ -1,6 +1,5 @@
 ---
-layout: redirect
-redirect_to: /overview/ 
+layout: default 
 ---
 <!DOCTYPE html>
 <html>
