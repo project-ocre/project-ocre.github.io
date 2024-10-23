@@ -7,7 +7,7 @@ has_children: true
 
 # Sample Applications
 
-This page provides an overview of the sample applications available for Atym-enabled devices. These samples demonstrate how to build and deploy applications using the Atym platform, helping you get started with development quickly and efficiently.
+This page provides an overview of the sample applications available for Ocre-enabled devices. These samples demonstrate how to build and deploy applications using the Ocre platform, helping you get started with development quickly and efficiently.
 
 ---
 ## Sample Structure
@@ -24,11 +24,11 @@ These files work together to create a complete Ocre container application.
 ---
 
 ## Available Samples
-We offer *two* sample applications to help you understand and explore the capabilities of the Atym platform:
+We offer *two* sample applications to help you understand and explore the capabilities of the Ocre platform:
 
-1. **[Hello World](./hello-world/index.md):** A basic application that demonstrates the fundamental structure of an Atym application and familiarizes you with the development environment.
+1. **[Hello World](./hello-world/index.md):** A basic application that demonstrates the fundamental structure of an Ocre application and familiarizes you with the development environment.
 
-2. **[Blinky](./blinky/index.md)**: An application that shows how to interact with device hardware by controlling an LED, introducing basic I/O operations on Atym-enabled devices.
+2. **[Blinky](./blinky/index.md)**: An application that shows how to interact with device hardware by controlling an LED, introducing basic I/O operations on Ocre-enabled devices.
 
 ---
 

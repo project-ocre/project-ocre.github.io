@@ -60,4 +60,4 @@ A grouping that provides a unit of isolation. Each tenant operates within a segr
 ## V
 ---
 ### Variables
-Key/value pairs that are defined by the Atym system. These are generally values for key system attributes such as the current date/time.
+Key/value pairs that are defined by the Ocre system. These are generally values for key system attributes such as the current date/time.

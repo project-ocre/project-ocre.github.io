@@ -7,4 +7,4 @@ parent: Reference
 
 # Container APIs
 
-This section documents the Atym Container APIs.
+This section documents the Ocre Container APIs.

@@ -5,7 +5,7 @@ parent: Components
 nav_order: 2 
 ---
 
-Atym containers can optionally include binary objects as part of the container image. These are additional resources that can be referenced by the WebAssembly module during execution.
+Ocre containers can optionally include binary objects as part of the container image. These are additional resources that can be referenced by the WebAssembly module during execution.
 
 Common use cases for binary objects include:
 

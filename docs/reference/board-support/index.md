@@ -7,4 +7,4 @@ has_children: true
 
 # Board Support
 
-This is the list of currently supported boards by the Atym platform. Click on the manufacturer below:
+This is the list of currently supported boards by the Ocre platform. Click on the manufacturer below:
