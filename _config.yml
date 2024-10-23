@@ -12,9 +12,12 @@ destination: _site
 favicon_ico: "/assets/images/favicon.png"
 logo: "/assets/images/logo.png"
 # Misc
-heading_anchors: true
 enable_copy_code_button: true
 permalink: pretty
+
+# Heading anchors/TOC
+heading_anchors: true
+toc: true
 
 ### Defaults paths/content types
 defaults:
@@ -98,6 +101,8 @@ aux_links:
 # Back to top link
 back_to_top: true
 back_to_top_text: "Back to top"
+# Enable or disable the previous/next buttons (may need to update all pages with "nav_order" to work)
+#show_previous_next: true
 
 # Copyright/license stuff
 footer_content: 'Copyright &copy; 2024 Contributors to Project Ocre, which has been established as <a href="https://lfedge.org/projects/ocre"> Project Ocre a Series of LF Projects</a>, LLC. Distributed by an <a href="https://github.com/project-ocre/project-ocre.github.io/blob/main/LICENSE.txt">Apache 2.0 License.</a>'
