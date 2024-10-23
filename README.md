@@ -23,9 +23,9 @@ This documentation site was built using [Jekyll](https://jekyllrb.com/) and the 
 ### Key Guidelines for Contributors
 * **Documentation Location:** All content related to Ocre’s documentation lives in the `docs` folder. If you're contributing, focus your efforts here.
 * **Editing Scope:** Contributors (who are not maintainers) should avoid editing files outside the `docs` folder. The rest of the structure is primarily for configuration and assets that support the documentation.
-* **Assets:** Any images, scripts, or styles related to the documentation should be placed in the `assets` (a subdirectory of `docs`). When adding images, make sure to reference them correctly in your Markdown files.
+* **Assets:** The assets directory is reserved for resources that support the site's core functionality, including scripts, styles, and any images referenced by configuration files or top-level pages (such as `_config.yml` and `index.md`). All other documentation-specific images should be stored alongside the documents where they are referenced, keeping resources as close as possible to their usage location.
 
-This structure and these guidelines help ensure the integrity and maintainability of the Ocre documentation site while allowing contributions to focus on content updates.
+This structure and these guidelines help ensure the integrity and maintainability of the Ocre documentation site while allowing contributions to focus on content updates. Failure to follow these guidelines may result in rejecting your PR. If you have any questions please reach out to us via [Slack](https://lfedge.slack.com/archives/C07F190CC3X).
 
 ## Getting Started
 
