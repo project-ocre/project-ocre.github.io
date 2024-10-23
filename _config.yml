@@ -1,7 +1,7 @@
 title: Ocre Docs
 description: Documentation for the Ocre runtime
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://docs.project-ocre.org" # the base hostname & protocol for your site, e.g. http://example.com
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 repository: project-ocre/project-ocre.github.io
 theme: just-the-docs
 
