@@ -4,28 +4,20 @@ title: Ocre Runtime
 parent: Architecture
 nav_order: 0 
 ---
-
 # Ocre Runtime
 
+The Ocre Runtime enables containerization on resource-constrained devices through a combination of proven open-source technologies:
 
-The Ocre Runtime is built upon the foundation of the [Ocre Runtime](https://lfedge.org/projects/ocre/), an entirely open-source initiative that provides the core functionality for running containerized applications on embedded devices. 
-
----
-
-![](ocre_runtime_detailed.png)
+![](ocre_runtime.webp)
 
 ## Components
 
-As illustrated in the diagram above, the runtime is composed of two main layers: the open-source Ocre components (in orange) and Ocre's proprietary additions (in green).
+- **[Zephyr](https://zephyrproject.org)**: A mature RTOS providing comprehensive library support, modularity, and support for hundreds of platforms out-of-the-box with easy adaptation to new hardware.
 
-### Ocre Components (Open-source)
-- **[Zephyr](https://zephyrproject.org)**: Ocre is built on the Zephyr RTOS for its comprehensive library support, modularity, and active developer community. This choice enables support for hundreds of platforms out-of-the-box and easy adaptation to new or custom hardware.
-- **[WebAssembly Micro Runtime](https://github.com/bytecodealliance/wasm-micro-runtime)**: Used as the virtualization layer, it allows for lightweight, sandboxed execution of containers on resource-constrained devices.
-- **Runtime Manager**: Oversees the execution of WebAssembly containers on target devices.
-- **Application Framework**: Supports multi-container embedded applications.
-- **[WASI Components](https://component-model.bytecodealliance.org/introduction.html)**: Tailored implementations of the WebAssembly System Interface for embedded systems.
-- **Hardware Abstraction Layer (HAL)**: Facilitates the "develop once, deploy anywhere" approach.
+- **[WebAssembly Micro Runtime](https://github.com/bytecodealliance/wasm-micro-runtime)**: Provides lightweight, sandboxed execution of containers through efficient virtualization.
 
-### Ocre Components (Proprietary) 
-- **Device Manager**: Manages the secure boot process, establishes connection with the Ocre Hub, handles configuration updates, and maintains runtime integrity according to the manifest file. 
-- **Container Supervisor**: Manages container lifecycles using a state machine approach. It oversees container creation, execution, and termination, interfacing with the Ocre container runtime. 
+- **[WASI Components](https://component-model.bytecodealliance.org/introduction.html)**: Implements the WebAssembly System Interface for embedded systems, enabling standardized system access.
+
+- **Application Framework**: Manages container lifecycle, resource allocation, and inter-container communication for multi-container applications.
+
+- **Runtime Manager**: Controls container deployment, updates, and monitoring across target devices.

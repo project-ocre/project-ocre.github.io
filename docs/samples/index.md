@@ -10,18 +10,6 @@ has_children: true
 This page provides an overview of the sample applications available for Ocre-enabled devices. These samples demonstrate how to build and deploy applications using the Ocre platform, helping you get started with development quickly and efficiently.
 
 ---
-## Sample Structure
-
-Each sample project in this repository consists of the following components:
-
-1. **Application source file** (`main.c`): Contains the main logic of the sample application in C.
-2. **CMakeLists.txt** (`CMakeLists.txt`): Specifies how to build the project using CMake.
-3. **Build configuration file** (`build.yaml`): Defines the container image configuration parameters. 
-5. **Container application file** (`manifest.yaml`): Defines container application configuration parameters.
-
-These files work together to create a complete Ocre container application.
-
----
 
 ## Available Samples
 We offer *two* sample applications to help you understand and explore the capabilities of the Ocre platform:
@@ -47,3 +35,4 @@ To access and work with the samples:
     cd ./samples/
     ```
 From here, you can explore each sample's directory to view the source code and follow the individual build and deployment instructions on the following pages.
+

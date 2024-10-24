@@ -17,7 +17,7 @@ Also, there is a sample application (`./src/main.c`) that will demonstrate how t
 > 2. The POSIX architecture does not work on macOS due to fundamental differences between macOS and other Unix-like operating systems.
 > 
 > For users affected by these limitations, we recommend using one of the following alternatives:
-> - A Linux-based x86_64 development container. (Feel free to re-use the [Ocre Dev Container](../prerequisites/dev-environment/index.md) you obtained when setting up your dev environment.)
+> - A Linux-based x86_64 development container. (Feel free to use the [Ocre Dev Container](../../prerequisites/dev-environment/index) you obtained when setting up your dev environment.)
 > - A computer with a x86_64 architecture 
 > - Emulating a Linux-based VM with x86_64 architecture
 
