@@ -1,7 +1,7 @@
 ---
 title: "B-U585I-IOT02A"
 layout: default
-parent: ST
+parent: STMicroelectronics 
 grandparent: Board Support
 ---
 
@@ -59,4 +59,3 @@ For additional details about the board and development tools, please refer to th
 
 * **Product Page**: [https://www.st.com/en/evaluation-tools/b-u585i-iot02a.html](https://www.st.com/en/evaluation-tools/b-u585i-iot02a.html)
 * **User Manual**: [https://www.st.com/resource/en/user_manual/um2839-discovery-kit-for-iot-node-with-stm32u5-series-stmicroelectronics.pdf](https://www.st.com/resource/en/user_manual/um2839-discovery-kit-for-iot-node-with-stm32u5-series-stmicroelectronics.pdf)
-* **STM32CubeIDE**: [https://www.st.com/content/st_com/en/stm32cubeide.html](https://www.st.com/content/st_com/en/stm32cubeide.html)

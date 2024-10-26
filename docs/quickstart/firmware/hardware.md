@@ -5,11 +5,11 @@ parent: Building and Flashing the Ocre Runtime
 nav_order: 1 
 ---
 
-# Building the Ocre Runtime
+# Using a Physical Device
 
-Building the Ocre runtime is the first step in creating a containerized app for your embedded device. This guide will walk you through the process of building the runtime from source and flashing it to your physical development board. 
+This guide covers building and flashing the Ocre runtime onto actual development boards. While simulated environments are great for initial testing, deploying to real hardware allows you to test your applications under authentic conditions and take advantage of board-specific features like sensors and networking capabilities.
 
-Also, you will find a sample application (`./src/main.c`) that will demonstrate how to use the Ocre runtime, which writes a simple hello world application to flash and directs the Ocre runtime to load and execute it.
+Please refer to the board-specific documentation in our [Board Support](../../../board-support) section for detailed setup instructions and requirements for your board before attempting to flash Ocre.
 
 ---
 
@@ -17,32 +17,42 @@ Also, you will find a sample application (`./src/main.c`) that will demonstrate 
 
 ### **1. Install Dependencies and the Zephyr SDK**
 
-Complete the [Install dependencies](https://docs.zephyrproject.org/latest/develop/getting_started/index.html#install-dependencies) and the [Install the Zephyr SDK](https://docs.zephyrproject.org/latest/develop/getting_started/index.html#install-the-zephyr-sdk) sections from the Zephyr [Getting Started Guide](https://docs.zephyrproject.org/latest/develop/getting_started/index.html#getting-started-guide). There are several steps that must be performed if this is the first time you’ve developed for Zephyr on your machine.
-In general, builds should be done on a Linux machine or on Windows using WSL2.
+Complete the [Install dependencies](https://docs.zephyrproject.org/latest/develop/getting_started/index.html#install-dependencies) section from the Zephyr [Getting Started Guide](https://docs.zephyrproject.org/latest/develop/getting_started/index.html#getting-started-guide). 
 
-**Note:** For the following steps we recommend using a Python virtual environment like [venv](https://docs.python.org/3/library/venv.html).
+{: .note}
+For the following steps we recommend using a Python virtual environment like [venv](https://docs.python.org/3/library/venv.html).
 
 ### **2. Install WEST**
 
 Install the [west](https://docs.zephyrproject.org/latest/develop/west/index.html) CLI tool, which is needed to build, run and manage Zephyr applications.
 
 ```
-$ pip install west
+pip install west
 ```
 
 ### **3. Initialize the workspace**
 
-This will checkout the project code and configure the Zephyr workspace.
+Next, we will prepare the Zephyr workspace and checkout the project code.
+
+First, create the `runtime` directory in the location of your chosing.
 ```
-$ cd
+mkdir runtime
+```
+Next, cd to the `runtime` directory.
 
-$ mkdir runtime
+```
+cd runtime
+```
 
-$ cd runtime
+Now, initialize the `ocre-runtime` repo.
+```
+west init -m git@github.com:project-ocre/ocre-runtime.git
+```
 
-$ west init -m git@github.com:project-ocre/ocre-runtime.git
+Lastly, update the repo with the `west` utility.
 
-$ west update
+```
+west update
 ```
 
 ### **4. Install Additional Zephyr (pip) requirements**
@@ -55,6 +65,14 @@ pip install -r zephyr/scripts/requirements.txt
 
 **Note:** This step is only possible after updating the repo with `west update`.
 
+### **5. Install the Zephyr SDK**
+For the last Zephyr requirement, we must install the SDK. 
+
+```
+cd zephyr/
+west sdk install && cd ..
+```
+
 ### **5. Build the Ocre Runtime**
 
 To build and flash for a physical device, follow these steps:
@@ -63,15 +81,23 @@ To build and flash for a physical device, follow these steps:
 
 2. Build the application for your specific board. Replace `BOARD_NAME` with your board's name:
    ```
-   $ west build -b BOARD_NAME ./application -d build -- -DMODULE_EXT_ROOT=`pwd`/application
+   cd ..
+   west build -b BOARD_NAME ./application -d build -- -DMODULE_EXT_ROOT=`pwd`/application
    ```
-**Note**: See the list of [supported boards](https://docs.zephyrproject.org/2.6.0/boards/index.html) from Zephyr to gather your board name. Or, simply run `west boards` from the terminal.
+
+{: .note}
+See the list of [supported boards](https://docs.zephyrproject.org/latest/boards/index.html) from Zephyr to gather your board name. Or, simply run `west boards` from the terminal.
 
 
 ### **6. Flash the Ocre Runtime to Your Device**
 1. Flash the application to your device:
    ```
-   $ west flash
+   west flash
    ```
 
 2. After flashing, restart/reset your board to run the application.
+
+## Troubleshooting
+This section covers common issues you might encounter when building and flashing the Ocre runtime to physical hardware, along with their solutions.
+
+- **Unsupported Board**: If you're unable to flash to your board, and it's not listed in our [supported boards](../../../board-support), check out our [Adding Board Support](../../../board-support/adding-support) guide under the Board Support section. This guide will walk you through the process of adding support for your specific hardware. 
