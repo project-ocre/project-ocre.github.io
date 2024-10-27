@@ -63,8 +63,6 @@ In order to build the Ocre runtime properly, you'll need to install a few remain
 pip install -r zephyr/scripts/requirements.txt
 ```
 
-**Note:** This step is only possible after updating the repo with `west update`.
-
 ### **5. Install the Zephyr SDK**
 For the last Zephyr requirement, we must install the SDK. 
 

@@ -28,7 +28,7 @@ cmake -DWASI_SDK_DIR=/opt/wasi-sdk -DCMAKE_TOOLCHAIN_FILE=/opt/wamr-sdk/app-sdk/
 make
 ```
 
-**Note:** This will create a container image called `blinky.nbx` that we can then deploy to our device.  
+This will create a container image called `blinky.nbx` that we can then deploy to our device.  
 
 ![](BuildBlinky.jpg)
 

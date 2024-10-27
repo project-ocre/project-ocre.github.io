@@ -3,6 +3,7 @@ title: Setting Up Your Development Environment
 layout: default
 parent: Prerequisites 
 nav_order: 1
+has_toc: true
 ---
 
 # Setting Up Your Development Environment
@@ -28,7 +29,8 @@ Before you begin, ensure that you have the following tools installed on your dev
 2. [Visual Studio Code](https://code.visualstudio.com/): A lightweight but powerful source code editor.
 3. [Dev Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers): This extension allows you to use Docker containers as development environments within VS Code.
 
-**Note:** The dev container can also be run directly in GitHub via [CodeSpaces](https://docs.github.com/en/codespaces), though you will only be able to build Ocre containers, not load them on your device as the dev container will not have access to your local devices.
+{: .note}
+The dev container can also be run directly in GitHub via [CodeSpaces](https://docs.github.com/en/codespaces), though you will only be able to build Ocre containers, not load them on your device as the dev container will not have access to your local devices.
 
 ### Steps
 
@@ -44,7 +46,8 @@ Before you begin, ensure that you have the following tools installed on your dev
 
 Once you select the folder, VS Code will reload. If the container does not exist yet, it will automatically create one and clone the sample repository into an isolated container volume. This process may take a few moments, and progress will be displayed in the lower right corner of the VS Code window. After the container is ready, you can open a terminal within VS Code to access the container environment.
 
-**Note**: Additional documentation and a step-by-step guide for working with dev containers can be found [here](https://code.visualstudio.com/docs/remote/containers-tutorial).
+{: .note}
+Additional documentation and a step-by-step guide for working with dev containers can be found [here](https://code.visualstudio.com/docs/remote/containers-tutorial).
 
 ---
 
@@ -61,3 +64,9 @@ The toolchain container can also be launched and used interactively as follows:
 cd samples
 docker run --rm -it -v $(pwd):/home/ocre ocre/ocre-c-toolchain:latest
 ```
+---
+
+## Troubleshooting
+This section covers common issues you might encounter when setting up your development environment, along with their solutions.
+
+- If you encounter errors opening the dev container, you likely need to authenticate with the GitHub Container Registry. Follow the authentication steps in the [GitHub documentation](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-with-a-personal-access-token-classic).
