@@ -77,13 +77,14 @@ For the last Zephyr requirement, we must install the SDK.
 
 ```
 cd zephyr/
-west sdk install && cd ..
+west sdk install
 ```
 
 ### **6. Build the application**
 
 The following will build the firmware for the *virtual*, `native_sim` target which will allow you to run the Ocre runtime on a simulated device, rather than a physical board.
 ```
+cd ..
 west build -b native_sim ./application -d build -- -DMODULE_EXT_ROOT=`pwd`/application
 ```
 

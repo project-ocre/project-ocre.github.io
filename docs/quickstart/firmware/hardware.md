@@ -68,7 +68,7 @@ For the last Zephyr requirement, we must install the SDK.
 
 ```
 cd zephyr/
-west sdk install && cd ..
+west sdk install
 ```
 
 ### **5. Build the Ocre Runtime**
@@ -94,6 +94,8 @@ See the list of [supported boards](https://docs.zephyrproject.org/latest/boards/
    ```
 
 2. After flashing, restart/reset your board to run the application.
+
+---
 
 ## Troubleshooting
 This section covers common issues you might encounter when building and flashing the Ocre runtime to physical hardware, along with their solutions.
