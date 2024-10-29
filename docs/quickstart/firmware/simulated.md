@@ -10,7 +10,7 @@ nav_order: 0
 This guide covers building and running the Ocre runtime using Zephyr's `native_sim` target - a simulated environment that allows you to test Ocre applications without physical hardware. This approach is particularly useful for initial development and testing.
 
 
-{: .note}
+{: .important}
 > There are *two* key limitations when building the native simulator:
 > 1. Building on ARM architectures is not currently supported due to a lack of 32-bit support.
 > 2. The POSIX architecture does not work on macOS due to fundamental differences between macOS and other Unix-like operating systems.
@@ -24,12 +24,12 @@ This guide covers building and running the Ocre runtime using Zephyr's `native_s
 
 ## Steps
 
-### **1. Install Dependencies and the Zephyr SDK**
+### **1. Install Dependencies and Zephyr SDK**
 
-Complete the [Install dependencies](https://docs.zephyrproject.org/latest/develop/getting_started/index.html#install-dependencies) section from the Zephyr [Getting Started Guide](https://docs.zephyrproject.org/latest/develop/getting_started/index.html#getting-started-guide). 
+Complete the [Install dependencies](https://docs.zephyrproject.org/3.7.0/develop/getting_started/index.html#install-dependencies) and the [Install the Zephyr SDK](https://docs.zephyrproject.org/3.7.0/develop/getting_started/index.html#install-the-zephyr-sdk) sections for your host operating system from the Zephyr (v3.7.0) [Getting Started Guide](https://docs.zephyrproject.org/3.7.0/develop/getting_started/index.html#getting-started-guide). 
 
 {: .note}
-For the following steps we recommend using a Python virtual environment like [venv](https://docs.python.org/3/library/venv.html).
+Currently the Ocre runtime is built on Zephyr `3.7.0`. As a result, the links in the above section reference `v3.7.0` documentation and not the *latest* documentation. It is advised to follow the links in this guide to ensure compability with your device.
 
 ### **2. Install WEST**
 
@@ -38,6 +38,9 @@ Install the [west](https://docs.zephyrproject.org/latest/develop/west/index.html
 ```
 pip install west
 ```
+
+{: .note}
+We recommend using a Python virtual environment like [venv](https://docs.python.org/3/library/venv.html) to help manage pip dependencies for this project.
 
 ### **3. Initialize the workspace**
 
@@ -72,23 +75,14 @@ In order to build the Ocre runtime properly, you'll need to install a few remain
 pip install -r zephyr/scripts/requirements.txt
 ```
 
-### **5. Install the Zephyr SDK**
-For the last Zephyr requirement, we must install the SDK. 
-
-```
-cd zephyr/
-west sdk install
-```
-
-### **6. Build the application**
+### **5. Build the application**
 
 The following will build the firmware for the *virtual*, `native_sim` target which will allow you to run the Ocre runtime on a simulated device, rather than a physical board.
 ```
-cd ..
 west build -b native_sim ./application -d build -- -DMODULE_EXT_ROOT=`pwd`/application
 ```
 
-### **7. Run the application**
+### **6. Run the application**
 
 To run the application, simply run the following command:
 ```
