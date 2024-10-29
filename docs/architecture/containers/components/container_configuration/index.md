@@ -14,7 +14,7 @@ The container configuration defines how a container should be run on the device.
 ```json
 {
   "architecture": "amd64",
-  "os": "nubix",
+  "os": "ocre",
   "config": {
     "Entrypoint": "on_init",
     "Environment": [
@@ -36,7 +36,7 @@ The elements within the container configuration are defined as follows:
 
 #### Required:
 - `architecture` (*string*): CPU architecture of the binaries in this image; this value MUST be set to **wasm**. This parameter also supports an optional variant value. For example, `thumbv4`.
-- `os` (*string*): Operating system which this image is built to run on; this MUST be **nubix**.
+- `os` (*string*): Operating system which this image is built to run on; this MUST be **ocre**.
 - `config` (*object*): Specifies the parameters used for execution
   - `EntryPoint`: The WASM function to call on container start.
   - `Environment`: Array of variables to set in the container environment.

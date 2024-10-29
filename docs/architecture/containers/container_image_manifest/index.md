@@ -48,8 +48,8 @@ The elements within the container configuration are defined as follows:
 - `schemaVersion` (*int*): Image manifest schema version; per the OCI Image Spec this
 MUST be **2**.
 - `mediaType` (*string*): Required type of this manifest file. For Ocre containers, this MUST be
-**application/vnd.nubixio.image.manifest.v1+json**.
+**application/vnd.ocre.image.manifest.v1+json**.
 - `config` (*object*): References the configuration object for this container image. Schema follows the [OCI Content Descriptor schema](https://github.com/opencontainers/image-spec/blob/main/descriptor.md). It has the
 following restrictions:
-  - `mediaType` must be set to **application/vnd.nubixio.image.config.v1+json**.
-- `layers` (*array*): List of elements that comprise this container image. Each layer is a descriptor. One and only one layer MUST be of type **application/vnd.nubixio.image.layer.v1.wasm** or **application/vnd.nubixio.image.layer.v1.wasm+aot**.
+  - `mediaType` must be set to **application/vnd.ocre.image.config.v1+json**.
+- `layers` (*array*): List of elements that comprise this container image. Each layer is a descriptor. One and only one layer MUST be of type **application/vnd.ocre.image.layer.v1.wasm** or **application/vnd.ocre.image.layer.v1.wasm+aot**.
