@@ -49,7 +49,7 @@ You may reboot the device by pressing the black button once.
 
 ## Resetting the Device to Factory Defaults
 
-Some information may be stored to flash memory and persist across reboots, such as any WiFi credentials you may have entered or applications that have been installed from the Atym hub. You can erase the flash memory to reset the board to a "Factory Default" state by pressing and holding the blue button for five seconds.
+Some information may be stored to flash memory and persist across reboots, such as any WiFi credentials you may have entered or applications that have been installed. You can erase the flash memory to reset the board to a "Factory Default" state by pressing and holding the blue button for five seconds.
 
 ---
 
