@@ -5,7 +5,7 @@ parent: STMicroelectronics
 grandparent: Board Support
 ---
 
-# B-U585I-IOT02A Discovery Board Overview
+# B-U585I-IOT02A Discovery Board
 
 ---
 
@@ -31,13 +31,33 @@ In the diagram below, you can see many of the board's physical components:
 
 ---
 
-## Powering the Device
+## Connecting to the Device
 
-There are two micro-USB ports on the board. The *top right* usb port labeled **USB STLINK** is the usb port we'll be using in this guide. Plug in the device and you should see some LEDs light up.
+### Physical Connection
+The board has two micro-USB ports. Connect a micro-USB cable to the port labeled **STLINK-V3E USB port (CN8)** in the top right corner of the board. Once connected, power and debug LEDs should illuminate, indicating the board is ready for use.
+
+### Serial Connection
+To monitor your device's output:
+1. Open your preferred serial terminal application 
+2. Configure the following settings:
+  * **Port**: Select the port where your device is connected
+  * **Baud Rate**: 115200
+  * **Data Bits**: 8
+  * **Parity**: None
+  * **Flow Control**: None
+  * **Line Endings**: None
+
+{: .note}
+The device will appear as a USB serial port when properly connected. On Linux/macOS it will typically be `/dev/ttyACM0` or similar, on Windows it will be a COM port.
 
 ---
 
-## Connecting to the Device
+## Flashing the Firmware
+
+To flash the Ocre runtime, please follow the steps in the [Using a Physical Device](../../../quickstart/firmware/hardware) section found in the [Building and Flashing the Ocre Runtime](../../../quickstart/firmware/index) guide. 
+
+{: .note}
+Be sure to use `b_u585i_iot02a` as your board name.
 
 ---
 
@@ -48,8 +68,16 @@ You may reboot the device by pressing the black button once.
 ---
 
 ## Resetting the Device to Factory Defaults
+To erase all stored data and reset the board to its factory default state:
 
-Some information may be stored to flash memory and persist across reboots, such as any WiFi credentials you may have entered or applications that have been installed. You can erase the flash memory to reset the board to a "Factory Default" state by pressing and holding the blue button for five seconds.
+1. Open STM32CubeProgrammer
+2. In the port dropdown menu, select "ST-LINK". Click the refresh icon next to "Serial Number", select your device, and click the green "Connect" button
+3. Select "Full chip erase" from the left sidebar (eraser icon)
+4. Click "OK" to confirm
+5. A dialog box will confirm successful flash memory erasure
+6. Click the green "Disconnect" button to free up the port for future flashing and debugging
+
+**Note**: This will erase all stored data including WiFi credentials and installed applications.
 
 ---
 
