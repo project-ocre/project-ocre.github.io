@@ -9,7 +9,7 @@ nav_order: 1
 
 This guide covers building and flashing the Ocre runtime onto actual development boards. While simulated environments are great for initial testing, deploying to real hardware allows you to test your applications under authentic conditions and take advantage of board-specific features like sensors and networking capabilities.
 
-Please refer to the board-specific documentation in our [Board Support](../../../board-support) section for detailed setup instructions and requirements for your board before attempting to flash Ocre.
+Please refer to the board-specific documentation in our [Board Support](../../board-support) section for detailed setup instructions and requirements for your board before attempting to flash Ocre.
 
 ---
 
@@ -20,7 +20,7 @@ Please refer to the board-specific documentation in our [Board Support](../../..
 Complete the [Install dependencies](https://docs.zephyrproject.org/3.7.0/develop/getting_started/index.html#install-dependencies) and the [Install the Zephyr SDK](https://docs.zephyrproject.org/3.7.0/develop/getting_started/index.html#install-the-zephyr-sdk) sections for your host operating system from the Zephyr (v3.7.0) [Getting Started Guide](https://docs.zephyrproject.org/3.7.0/develop/getting_started/index.html#getting-started-guide). 
 
 {: .note}
-Currently the Ocre runtime is built on Zephyr `3.7.0`. As a result, the links in the above section reference `v3.7.0` documentation and not the *latest* documentation. It is advised to follow the links in this guide to ensure compability with your device.
+Currently the Ocre runtime is built on Zephyr `3.7.0`. As a result, the links in the above section reference `v3.7.0` documentation and not the *latest* documentation. It is advised to follow the links in this guide to ensure compatibility with your device.
 
 ### **2. Install WEST**
 
@@ -37,7 +37,7 @@ We recommend using a Python virtual environment like [venv](https://docs.python.
 
 Next, we will prepare the Zephyr workspace and checkout the project code.
 
-First, create the `runtime` directory in the location of your chosing.
+First, create the `runtime` directory in the location of your choosing.
 ```
 mkdir runtime
 ```
@@ -94,4 +94,4 @@ After flashing, restart/reset your board to run the application.
 ## Troubleshooting
 This section covers common issues you might encounter when building and flashing the Ocre runtime to physical hardware, along with their solutions.
 
-- **Unsupported Board**: If you're unable to flash to your board, and it's not listed in our [supported boards](../../../board-support), check out our [Adding Board Support](../../../board-support/adding-support) guide under the Board Support section. This guide will walk you through the process of adding support for your specific hardware. 
+- **Unsupported Board**: If you're unable to flash to your board, and it's not listed in our [supported boards](../../board-support), check out our [Adding Board Support](../../board-support/adding-support) guide under the Board Support section. This guide will walk you through the process of adding support for your specific hardware. 

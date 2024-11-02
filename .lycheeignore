@@ -11,4 +11,9 @@
 # Example:
 # https://example.com/specific-page
 # *.example.com/*
+
+# Ignore localhost
 http://localhost:4000/
+
+# For some reason st times out on all pages. Will need to fix this in the future
+https://www.st.com

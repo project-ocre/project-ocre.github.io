@@ -1,9 +1,8 @@
 ---
 title: Setting Up Your Development Environment 
 layout: default
-parent: Prerequisites 
-nav_order: 1
-has_toc: true
+parent: Your First App 
+nav_order: 0
 ---
 
 # Setting Up Your Development Environment

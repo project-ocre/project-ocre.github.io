@@ -16,7 +16,7 @@ This guide covers building and running the Ocre runtime using Zephyr's `native_s
 > 2. The POSIX architecture does not work on macOS due to fundamental differences between macOS and other Unix-like operating systems.
 > 
 > For users affected by these limitations, we recommend using one of the following alternatives:
-> - A Linux-based x86_64 development container. (Feel free to use the [Ocre Dev Container](../../prerequisites/dev-environment/index) you obtained when setting up your dev environment.)
+> - A Linux-based x86_64 development container. (Feel free to use the [Ocre Dev Container](../first-app/dev-environment) you obtained when setting up your dev environment.)
 > - A computer with a x86_64 architecture 
 > - Emulating a Linux-based VM with x86_64 architecture
 
@@ -29,7 +29,7 @@ This guide covers building and running the Ocre runtime using Zephyr's `native_s
 Complete the [Install dependencies](https://docs.zephyrproject.org/3.7.0/develop/getting_started/index.html#install-dependencies) and the [Install the Zephyr SDK](https://docs.zephyrproject.org/3.7.0/develop/getting_started/index.html#install-the-zephyr-sdk) sections for your host operating system from the Zephyr (v3.7.0) [Getting Started Guide](https://docs.zephyrproject.org/3.7.0/develop/getting_started/index.html#getting-started-guide). 
 
 {: .note}
-Currently the Ocre runtime is built on Zephyr `3.7.0`. As a result, the links in the above section reference `v3.7.0` documentation and not the *latest* documentation. It is advised to follow the links in this guide to ensure compability with your device.
+Currently the Ocre runtime is built on Zephyr `3.7.0`. As a result, the links in the above section reference `v3.7.0` documentation and not the *latest* documentation. It is advised to follow the links in this guide to ensure compatibility with your device.
 
 ### **2. Install WEST**
 
@@ -46,7 +46,7 @@ We recommend using a Python virtual environment like [venv](https://docs.python.
 
 Next, we will prepare the Zephyr workspace and checkout the project code.
 
-First, create the `runtime` directory in the location of your chosing.
+First, create the `runtime` directory in the location of your choosing.
 ```
 mkdir runtime
 ```
