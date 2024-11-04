@@ -52,9 +52,9 @@ The device will appear as a USB serial port when properly connected. On Linux/ma
 
 ---
 
-## Flashing the Firmware
+## Building and Flashing the Ocre Runtime.
 
-To flash the Ocre runtime, please follow the steps in the [Using a Physical Device](../../../quickstart/firmware/hardware) section found in the [Building and Flashing the Ocre Runtime](../../../quickstart/firmware) guide. 
+To build and flash the Ocre runtime to your board, please follow the steps in the [Using a Physical Device](../../../quickstart/firmware/hardware) section found in the [Building and Flashing the Ocre Runtime](../../../quickstart/firmware) guide. 
 
 {: .note}
 Be sure to use `b_u585i_iot02a` as your board name.

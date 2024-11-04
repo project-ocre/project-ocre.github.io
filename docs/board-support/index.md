@@ -7,12 +7,6 @@ nav_order: 6
 # Board Support
 The Ocre runtime supports various development boards, each offering different features and capabilities. 
 
----
-
-## Using this Documentation
-1. First, select your board's manufacturer in the **sidebar** to review required tools and setup instructions specific to that manufacturer's development boards
-2. After installing the necessary tools, find your specific board's documentation for detailed hardware setup and flashing instructions
-
 **Each board's documentation provides:**
 - Hardware specifications and features
 - Connection and setup instructions
@@ -20,8 +14,14 @@ The Ocre runtime supports various development boards, each offering different fe
 - Reset and recovery steps
 - Relevant board documentation links
 
+---
+
+## Using this Documentation
+1. First, select your board's manufacturer in the **sidebar** to review required tools and setup instructions specific to that manufacturer's development boards
+2. After installing the necessary tools, find your specific board's documentation for detailed hardware setup and flashing instructions
+
 {: .important}
-Make sure to review and install all required tools outlined in the manufacturer's page before proceeding to your specific board's instructions. For example, STMicroelectronics boards require STM32CubeProgrammer for flashing firmware.
+Make sure to review and install all required tools outlined in the manufacturer's page before proceeding to your specific board's instructions.
 
 ---
 
