@@ -3,6 +3,7 @@ title: "NUCLEO-H723ZG"
 layout: default
 parent: STMicroelectronics 
 grandparent: Board Support
+nav_exclude: true 
 ---
 
 # NUCLEO-H723ZG Development Board

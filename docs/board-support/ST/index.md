@@ -15,7 +15,7 @@ Before working with any STM32 board, you should install:
 
 ## Optional
 Some boards need other utilities and drivers to build and flash the Ocre runtime and can be found below.
-* **[openocd driver](https://openocd.org/)**: Openocd is an opensource on chip debugger, and the default flashing utility for boards like the [Nucelo-H723ZG](../../board-support/ST/NUCLEO-H723ZG). 
+* **[openocd driver](https://openocd.org/)**: Openocd is an opensource on chip debugger, and the default flashing utility for some ST boards. 
 
 ## Supported Boards
 Select your board below for detailed setup and usage instructions.
