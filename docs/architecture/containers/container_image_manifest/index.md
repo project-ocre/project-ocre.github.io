@@ -5,10 +5,9 @@ parent: Containers
 nav_order: 1 
 ---
 
+# Container Image Manifest
 
-The Container Image Manifest is a crucial component of Ocre containers, providing a comprehensive description of the container's structure and contents. It serves as the blueprint that defines and references the three main elements of an Ocre container described in the [Components](../components/index.md) section. The manifest ensures that all components can be correctly deployed and executed by the [Ocre Runtime](../../runtime). 
-
-Ocre container images follow the [Open Container Initiative (OCI)](https://opencontainers.org/) format where possible, with some modifications to support the needs of constrained, embedded devices. The manifest format is modeled after the [OCI Image Manifest](https://github.com/opencontainers/image-spec/blob/main/manifest.md) format and conforms to the [Wasm OCI Artifact](https://tag-runtime.cncf.io/wgs/wasm/deliverables/wasm-oci-artifact/) layout specifications. This structure ensures that all components of the container are properly defined, versioned, and can be efficiently managed in resource-constrained environments.
+The Container Image Manifest is a crucial component of Ocre containers, providing a comprehensive description of the container's structure and contents. It serves as the blueprint that defines and references the *three* main elements of an Ocre container: [*Container Configuration*](../components/container_configuration), a [*WebAssembly Module*](../components/webassembly_module), and (optional) [*Binary Objects*](../components/binary_objects). The manifest ensures that all components can be correctly deployed and executed by the [Ocre Runtime](../../runtime/overview/index.md). 
 
 ---
 
@@ -39,6 +38,7 @@ Here's an example of an Ocre Container Image Manifest:
   ]
 }
 ```
+---
 
 ### Configuration Parameters
 
@@ -53,3 +53,9 @@ MUST be **2**.
 following restrictions:
   - `mediaType` must be set to **application/vnd.ocre.image.config.v1+json**.
 - `layers` (*array*): List of elements that comprise this container image. Each layer is a descriptor. One and only one layer MUST be of type **application/vnd.ocre.image.layer.v1.wasm** or **application/vnd.ocre.image.layer.v1.wasm+aot**.
+
+---
+
+### OCI Compliance
+
+Ocre container images follow the [Open Container Initiative (OCI)](https://opencontainers.org/) format where possible, with some modifications to support the needs of constrained, embedded devices. The manifest format is modeled after the [OCI Image Manifest](https://github.com/opencontainers/image-spec/blob/main/manifest.md) format and conforms to the [Wasm OCI Artifact](https://tag-runtime.cncf.io/wgs/wasm/deliverables/wasm-oci-artifact/) layout specifications. This structure ensures that all components of the container are properly defined, versioned, and can be efficiently managed in resource-constrained environments.

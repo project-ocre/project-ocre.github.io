@@ -34,5 +34,9 @@ To access and work with the samples:
     ```bash
     cd ./samples/
     ```
-From here, you can explore each sample's directory to view the source code and follow the individual build and deployment instructions on the following pages.
+From here, you can explore each of the samples to get a feel for how Ocre containers are created. 
 
+---
+
+## Building and Deploying the Samples
+Once you're framiliar with the sample code, simply click the appropriate sample in the left sidebar to learn how to build and deploy it.
