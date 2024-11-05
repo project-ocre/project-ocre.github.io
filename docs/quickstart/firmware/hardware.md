@@ -2,14 +2,14 @@
 title: Using a Physical Device 
 layout: default
 parent: Building and Flashing the Ocre Runtime 
-nav_order: 1 
+nav_order: 2 
 ---
 
 # Using a Physical Device
 
 This guide covers building and flashing the Ocre runtime onto actual development boards. While simulated environments are great for initial testing, deploying to real hardware allows you to test your applications under authentic conditions and take advantage of board-specific features like sensors and networking capabilities.
 
-Please refer to the board-specific documentation in our [Board Support](../../board-support) section for detailed setup instructions and requirements for your board before attempting to flash Ocre.
+Please refer to the board-specific documentation in our [Board Support](../../../board-support) section for detailed setup instructions and requirements for your board before attempting to flash Ocre.
 
 ---
 
@@ -78,8 +78,7 @@ To build and flash for a physical device, follow these steps:
    ```
 
 {: .note}
-See the list of [supported boards](https://docs.zephyrproject.org/3.7.0/boards/index.html) from Zephyr to gather your board name. Or, simply run `west boards` from the terminal.
-
+You can also run the **West Build** task directly from the **Ocre Workspace** file as defined in the [Setting Up Your Development Environment](../dev-environment) section. If you do, be sure to select your board name as your build target. See the [Board Support](../../../board-support) section in your docs to see if your board is currently supported. 
 
 ### **6. Flash the Ocre Runtime to Your Device**
 1. Flash the application to your device:
@@ -94,4 +93,4 @@ After flashing, restart/reset your board to run the application.
 ## Troubleshooting
 This section covers common issues you might encounter when building and flashing the Ocre runtime to physical hardware, along with their solutions.
 
-- **Unsupported Board**: If you're unable to flash to your board, and it's not listed in our [supported boards](../../board-support), check out our [Adding Board Support](../../board-support/adding-support) guide under the Board Support section. This guide will walk you through the process of adding support for your specific hardware. 
+- **Unsupported Board**: If you're unable to flash to your board, and it's not listed in our [Board Support](../../../board-support), check out our [Adding Board Support](../../../board-support/adding-support) guide under the Board Support section. This guide will walk you through the process of adding support for your specific hardware. 

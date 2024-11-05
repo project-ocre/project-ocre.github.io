@@ -2,7 +2,7 @@
 title: Using a Simulated Device 
 layout: default
 parent: Building and Flashing the Ocre Runtime 
-nav_order: 0 
+nav_order: 1 
 ---
 
 # Using a Simulated Device
@@ -81,6 +81,9 @@ The following will build the firmware for the *virtual*, `native_sim` target whi
 ```
 west build -b native_sim ./application -d build -- -DMODULE_EXT_ROOT=`pwd`/application
 ```
+
+{: .note}
+You can also run the **West Build** task directly from the **Ocre Workspace** file as defined in the [Setting Up Your Development Environment](../dev-environment) section. If you do, be sure to select `native_sim` as your build target. 
 
 ### **6. Run the application**
 

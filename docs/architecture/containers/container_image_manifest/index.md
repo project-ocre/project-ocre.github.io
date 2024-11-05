@@ -7,7 +7,7 @@ nav_order: 1
 
 # Container Image Manifest
 
-The Container Image Manifest is a crucial component of Ocre containers, providing a comprehensive description of the container's structure and contents. It serves as the blueprint that defines and references the *three* main elements of an Ocre container: [*Container Configuration*](../components/container_configuration), a [*WebAssembly Module*](../components/webassembly_module), and (optional) [*Binary Objects*](../components/binary_objects). The manifest ensures that all components can be correctly deployed and executed by the [Ocre Runtime](../../runtime/overview/index.md). 
+The Container Image Manifest is a crucial component of Ocre containers, providing a comprehensive description of the container's structure and contents. It serves as the blueprint that defines and references the *three* main elements of an Ocre container: [*Container Configuration*](../components/container_configuration), a [*WebAssembly Module*](../components/webassembly_module), and (optional) [*Binary Objects*](../components/binary_objects). The manifest ensures that all components can be correctly deployed and executed by the [Ocre Runtime](../../runtime). 
 
 ---
 
