@@ -1,5 +1,6 @@
 # Ocre Documentation
 [![Publish](https://github.com/project-ocre/project-ocre.github.io/actions/workflows/publish.yml/badge.svg)](https://github.com/project-ocre/project-ocre.github.io/actions/workflows/publish.yml)
+[![slack](https://img.shields.io/badge/slack-ocre-brightgreen.svg?logo=slack)](https://lfedge.slack.com/archives/C07F190CC3X)
 
 ## Overview
 This repository contains the raw source files for building and maintaining documentation for the [Ocre runtime](https://github.com/project-ocre/ocre-runtime) project. While this repository houses the content and structure, it's not intended for direct reading of the documentation. For the most up-to-date and user-friendly version of our docs, please visit our live site at: https://docs.project-ocre.org/
