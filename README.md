@@ -80,10 +80,6 @@ We encourage contributions to improve the documentation! If you’re looking to 
 
 We'll review your contribution and get back to you as soon as possible. Thank you for helping improve the Ocre documentation!
 
-## License
-
-[Your license information]
-
 ## Contact
 
 If you have any questions, feel free to [reach out](https://lfedge.slack.com/archives/C07F190CC3X) on Slack or open an issue for discussion.
