@@ -61,8 +61,11 @@ The toolchain container can also be launched and used interactively as follows:
 2. **Run the following command** 
 ```sh
 cd samples
-docker run --rm -it -v $(pwd):/home/ocre ocre/ocre-c-toolchain:latest
+docker run --rm -it -v $(pwd):/home/ocre ghcr.io/atym-io/atym-c-toolchain:latest
 ```
+
+{: .note}
+At the moment, there is not a docker image that contains the Ocre toolchain. While we're working on getting that up, please use the `atym` toolchain in the above example.
 
 ---
 
