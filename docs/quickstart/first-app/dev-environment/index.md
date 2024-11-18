@@ -1,7 +1,7 @@
 ---
 title: Setting Up Your Development Environment 
 layout: default
-parent: Your First App 
+parent: Your First Container 
 nav_order: 0
 ---
 
@@ -60,7 +60,7 @@ The toolchain container can also be launched and used interactively as follows:
 
 2. **Run the following command** 
 ```sh
-cd samples
+cd getting-started
 docker run --rm -it -v $(pwd):/home/ocre ghcr.io/atym-io/atym-c-toolchain:latest
 ```
 
@@ -73,3 +73,9 @@ At the moment, there is not a docker image that contains the Ocre toolchain. Whi
 This section covers common issues you might encounter when setting up your development environment, along with their solutions.
 
 - If you encounter errors opening the dev container, you likely need to authenticate with the GitHub Container Registry. Follow the authentication steps in the [GitHub documentation](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-with-a-personal-access-token-classic).
+
+---
+
+## Next Steps
+
+Once you're set up your development environment, head over to the [Building And Deploying Your First Container](../first-container) page to learn how to build and deploy your first container using Ocre.

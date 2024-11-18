@@ -1,5 +1,5 @@
 ---
-title: Your First App 
+title: Your First Container 
 layout: default
 parent: Quickstart
 nav_order: 3 
@@ -18,4 +18,4 @@ Begin by following our [Setting Up Your Development Environment](./dev-environme
 - Using Visual Studio Code with Dev Containers for an integrated IDE experience
 - Using Docker interactively for a command-line workflow
 
-Once your environment is ready, proceed to [Creating Your First App](./first-container) to create your first Ocre application.
+Once your environment is ready, proceed to [Building And Deploying Your First Container](./first-container) to continue with your first Ocre application. 
