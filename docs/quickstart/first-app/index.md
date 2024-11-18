@@ -18,7 +18,4 @@ Begin by following our [Setting Up Your Development Environment](./dev-environme
 - Using Visual Studio Code with Dev Containers for an integrated IDE experience
 - Using Docker interactively for a command-line workflow
 
-Once your environment is ready, proceed to [Creatig Your First App](./first-container) to create your first Ocre application.
-
-{: .note}
-While we recommend using our Docker-based development environment for consistency, experienced developers can also set up their own toolchain using the required components detailed in our documentation.
+Once your environment is ready, proceed to [Creating Your First App](./first-container) to create your first Ocre application.

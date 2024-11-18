@@ -40,7 +40,7 @@ The dev container can also be run directly in GitHub via [CodeSpaces](https://do
    ```
 3. **Open Visual Studio Code**: Launch VSCode on your machine.
 4. **Open Folder in Container**:
-- Run the command Dev Containers: Open Folder in Container... from the Command Palette (Cmd + Shift + P or Ctrl + Shift + P).
+- Run the command `Dev Containers: Open Folder in Container...` from the Command Palette (Cmd + Shift + P or Ctrl + Shift + P).
 - Select the folder containing the cloned repository.
 
 Once you select the folder, VS Code will reload. If the container does not exist yet, it will automatically create one and clone the sample repository into an isolated container volume. This process may take a few moments, and progress will be displayed in the lower right corner of the VS Code window. After the container is ready, you can open a terminal within VS Code to access the container environment.
