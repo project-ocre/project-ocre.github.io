@@ -46,7 +46,7 @@ An **example** of this file is as follows:
 }
 ```
 
-This illustrates an index that provides a single reference the Ocre container image manifest.
+This illustrates an index that provides a single reference to the Ocre container image manifest.
 
 ### blobs/
 
