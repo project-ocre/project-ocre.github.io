@@ -47,6 +47,7 @@ The manifest format follows the [OCI Image Manifest](https://github.com/opencont
 Elements within the **manifest** are defined as follows:
 
 | **Element** | **Type** | **Required** | **Description** |
+|---------|------|----------|-------------|
 | `schemaVersion` | int | Yes | Specifies the image manifest schema version; per the OCI Image Spec this MUST be `2` |
 | `mediaType` | string | Yes | Specifies the type of this manifest file; for Ocre containers, this MUST be `application/vnd.oci.image.manifest.v1+json` |
 | `config` | descriptor object | Yes | References the configuration object for this container image; schema follows the [OCI Content Descriptor](https://github.com/opencontainers/image-spec/blob/main/descriptor.md) schema; `mediaType` must be set to `application/vnd.wasm.config.v0+json` |
