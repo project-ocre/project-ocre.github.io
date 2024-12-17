@@ -22,7 +22,19 @@ Complete the [Install dependencies](https://docs.zephyrproject.org/3.7.0/develop
 {: .note}
 Currently the Ocre runtime is built on Zephyr `3.7.0`. As a result, the links in the above section reference `v3.7.0` documentation and not the *latest* documentation. It is advised to follow the links in this guide to ensure compatibility with your device.
 
-### **2. Install WEST**
+### **2. Create a Virtual Python Environment (venv)**
+Create a [Python virtual environment](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/) (venv) to isolate your Python project dependencies.
+
+```
+mkdir runtime && cd runtime
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+{: .highlight}
+You *may* need to install the `python3-venv` package (or equivalent) on your host system beforehand.
+
+### **3. Install WEST**
 
 Install the [west](https://docs.zephyrproject.org/latest/develop/west/index.html) CLI tool, which is needed to build, run and manage Zephyr applications.
 
@@ -30,22 +42,7 @@ Install the [west](https://docs.zephyrproject.org/latest/develop/west/index.html
 pip install west
 ```
 
-{: .note}
-We recommend using a Python virtual environment like [venv](https://docs.python.org/3/library/venv.html) to help manage pip dependencies for this project.
-
-### **3. Initialize the workspace**
-
-Next, we will prepare the Zephyr workspace and checkout the project code.
-
-First, create the `runtime` directory in the location of your choosing.
-```
-mkdir runtime
-```
-Next, cd to the `runtime` directory.
-
-```
-cd runtime
-```
+### **4. Initialize the workspace**
 
 Now, initialize the `ocre-runtime` repo.
 ```
@@ -58,7 +55,10 @@ Lastly, update the repo with the `west` utility.
 west update
 ```
 
-### **4. Install Additional Zephyr (pip) requirements**
+{: .note}
+`west update` may take 5-10 minutes as it pulls all Zephyr Project board sources.
+
+### **5. Install Additional Zephyr (pip) requirements**
 
 In order to build the Ocre runtime properly, you'll need to install a few remaining requirements for Zephyr.
 
@@ -66,27 +66,30 @@ In order to build the Ocre runtime properly, you'll need to install a few remain
 pip install -r zephyr/scripts/requirements.txt
 ```
 
-### **5. Build the Ocre Runtime**
+### **6. Build the Ocre Runtime**
 
-To build and flash for a physical device, follow these steps:
-
-1. Connect your board to your computer.
-
-2. Build the application for your specific board. Replace `BOARD_NAME` with your board's name:
-   ```
-   west build -b BOARD_NAME ./application -d build -- -DMODULE_EXT_ROOT=`pwd`/application
-   ```
+Build the application for your specific board, replacing `BOARD_NAME` with your board's name:
+```
+west build -b BOARD_NAME ./application -d build -- -DMODULE_EXT_ROOT=`pwd`/application
+```
 
 {: .note}
-You can also run the **West Build** task directly from the **Ocre Workspace** file as defined in the [Setting Up Your Development Environment](../dev-environment) section. If you do, be sure to select your board name as your build target. See the [Board Support](../../../board-support) section in your docs to see if your board is currently supported. 
+ See the [Board Support](../../../board-support) section in your docs to see if your board is currently supported. If your board is listed, check the "Building and Flashing the Ocre Runtime" section for your `BOARD_NAME` and other relevant info for flashing the Ocre Runtime to your particular device.
 
-### **6. Flash the Ocre Runtime to Your Device**
+### **7. Flash the Ocre Runtime to Your Device**
+
+To flash the Ocre Runtime to your device follow these steps:
+
+1. Connect your board to your computer.
+2. Open your [serial console](../../quickstart/prerequisites/serial-console/index.md), and connect to your board.
 1. Flash the application to your device:
    ```
    west flash
    ```
 
-After flashing, restart/reset your board to run the application.
+After flashing, restart/reset your board to run the application. If successful, you should see the following output on your console:
+
+![](../success.png)
 
 ---
 
