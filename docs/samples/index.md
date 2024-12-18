@@ -14,9 +14,9 @@ This page provides an overview of the sample applications available for Ocre-ena
 ## Available Samples
 We offer *two* sample applications to help you understand and explore the capabilities of the Ocre platform:
 
-1. **[Hello World](./hello-world/index.md):** A basic application that demonstrates the fundamental structure of an Ocre application and familiarizes you with the development environment.
+1. **[Hello World](./hello-world):** A basic application that demonstrates the fundamental structure of an Ocre application and familiarizes you with the development environment.
 
-2. **[Blinky](./blinky/index.md)**: An application that shows how to interact with device hardware by controlling an LED, introducing basic I/O operations on Ocre-enabled devices.
+2. **[Blinky](./blinky)**: An application that shows how to interact with device hardware by controlling an LED, introducing basic I/O operations on Ocre-enabled devices.
 
 ---
 
@@ -24,19 +24,15 @@ We offer *two* sample applications to help you understand and explore the capabi
 
 To access and work with the samples:
 
-1. Open a terminal or command prompt.
-2. Clone the [getting-started](https://github.com/project-ocre/getting-started) repo.
-    ```bash
-    git clone git@github.com:project-ocre/getting-started.git
-    ```
+1. Ensure that you've set up your [Development Environment](../quickstart/first-app/dev-environment)
 
-3. Navigate to the samples directory:
+2. Navigate to the samples directory in your development environment:
     ```bash
-    cd ./samples/
+    cd samples/
     ```
 From here, you can explore each of the samples to get a feel for how Ocre containers are created. 
 
 ---
 
-## Building and Deploying the Samples
-Once you're framiliar with the sample code, simply click the appropriate sample in the left sidebar to learn how to build and deploy it.
+## Next Steps 
+Once you're familiar with the sample code, simply click the appropriate sample in the left sidebar to learn how to build and deploy it.

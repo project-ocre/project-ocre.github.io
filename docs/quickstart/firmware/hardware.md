@@ -9,7 +9,8 @@ nav_order: 2
 
 This guide covers building and flashing the Ocre runtime onto actual development boards. While simulated environments are great for initial testing, deploying to real hardware allows you to test your applications under authentic conditions and take advantage of board-specific features like sensors and networking capabilities.
 
-Please refer to the board-specific documentation in our [Board Support](../../../board-support) section for detailed setup instructions and requirements for your board before attempting to flash Ocre.
+{: .note}
+Please refer to the "Building and Flashing the Ocre Runtime" section for your board in our in our [Board Support](../../../board-support) section for your boards name, as well as any additional setup instructions should you need them.
 
 ---
 
@@ -74,7 +75,7 @@ west build -b BOARD_NAME ./application -d build -- -DMODULE_EXT_ROOT=`pwd`/appli
 ```
 
 {: .note}
- See the [Board Support](../../../board-support) section in your docs to see if your board is currently supported. If your board is listed, check the "Building and Flashing the Ocre Runtime" section for your `BOARD_NAME` and other relevant info for flashing the Ocre Runtime to your particular device.
+You can also run the **West Build** task directly from the **Ocre Workspace** file as defined in the [Ocre Workspace File](../../../reference/workspacefile) reference. If you do, be sure to select your board as your build target from the dropdown list of available boards. 
 
 ### **7. Flash the Ocre Runtime to Your Device**
 

@@ -8,37 +8,40 @@ has_children: true
 
 # Blinky Sample
 
-The Blinky sample demonstrates how to build and deploy a simple Ocre container that allows you to interact with device hardware, namely flashing an LED. This is a good introduction to understanding how Ocre containers can perform basic I/O operations.
+Learn how to *build* and *deploy* your first Ocre container using our Blinky sample. This guide demonstrates the fundamental workflow of containerized application development with Ocre.
 
 ---
 
-## Building the Blinky sample
+## Building the Blinky Sample
 
 The following steps will guide you to build the blinky sample.
 
-1. Move into the `blinky` directory (found in `samples`).
+**1.** Move into the `blinky` directory.
 ```
-cd blinky
+cd samples/blinky
 ```
 
-2. Next, build the blinky sample using the following commands:
+**2.** Next, build the blinky sample using the following commands:
 ```
 mkdir build && cd build
 cmake -DWASI_SDK_DIR=/opt/wasi-sdk -DCMAKE_TOOLCHAIN_FILE=/opt/wamr-sdk/app-sdk/wamr_toolchain.cmake ..
 make
 ```
 
-This will create a container image called `blinky.nbx` that we can then deploy to our device.  
+This step results in the creation of a [WASM](https://webassembly.org/) file named `blinky.wasm`, which will be used by the Ocre CLI to create an Ocre container in the next step.
 
-![](BuildBlinky.jpg)
+**3.** Last, lets create an Ocre container using the Ocre CLI. 
+
+{: .important}
+Steps to be updated soon
+
+___
+
+## Deploying the Hello World Sample to Your Device 
+
+Now that you've built your container, let's get it running on your device.
+
+{: .important}
+Steps to be updated soon
 
 ---
-
-## Deploying the Blinky sample
-The following steps will guide you to deploy the blinky sample to your device.
-
-1. To deploy the blinky sample, simply run the following in your terminal:
-```
-example code
-goes here
-```

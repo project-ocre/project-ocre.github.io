@@ -7,7 +7,7 @@ nav_order: 0
 
 # Setting Up Your Development Environment
 
-The Ocre toolchain for C/C++ is provided as a Docker container image to ensure a consistent development environment for building containerzied applications with Ocre. You can utilize this container in two ways:
+The Ocre toolchain for C/C++ is provided as a Docker container image to ensure a consistent development environment for building containerized applications with Ocre. You can utilize this container in two ways:
 
 1. [Using Visual Studio Code with Dev Containers](#developing-with-visual-studio-code): Provides an integrated development experience with full IDE support and container management.
 
@@ -38,7 +38,7 @@ The dev container can also be run directly in GitHub via [CodeSpaces](https://do
    ```bash
    git clone https://github.com/project-ocre/getting-started.git
    ```
-3. **Open Visual Studio Code**: Launch VSCode on your machine.
+3. **Open Visual Studio Code** 
 4. **Open Folder in Container**:
 - Run the command `Dev Containers: Open Folder in Container...` from the Command Palette (Cmd + Shift + P or Ctrl + Shift + P).
 - Select the folder containing the cloned repository.

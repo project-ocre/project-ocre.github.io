@@ -2,7 +2,10 @@
 title: Guides
 layout: default
 nav_order: 5 
-has_children: true 
+has_children: true
+
+# Update once pages are added/complete
+has_toc: false 
 ---
 
 # Guides

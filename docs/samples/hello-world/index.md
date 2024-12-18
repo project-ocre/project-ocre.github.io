@@ -8,7 +8,7 @@ has_children: true
 
 # Hello World Sample
 
-The Hello World sample demonstrates the basic structure of an Ocre container, introducing you to the core components of Ocre's development environment. This page will guide you through the steps to build and deploy the Ocre container, helping you get familiar with Ocre's containerized application process.
+Learn how to *build* and *deploy* your first Ocre container using our Hello World sample. This guide demonstrates the fundamental workflow of containerized application development with Ocre.
 
 ---
 
@@ -16,28 +16,32 @@ The Hello World sample demonstrates the basic structure of an Ocre container, in
 
 The following steps will guide you to build the Hello World sample.
 
-1. Move into the `hello-world` directory (found in `samples`).
+**1.** Move into the `hello-world` directory.
 ```
-cd hello-world
+cd samples/hello-world
 ```
 
-2. Next, build the hello world sample using the following commands:
+**2.** Next, build the hello world sample using the following commands:
 ```
 mkdir build && cd build
 cmake -DWASI_SDK_DIR=/opt/wasi-sdk -DCMAKE_TOOLCHAIN_FILE=/opt/wamr-sdk/app-sdk/wamr_toolchain.cmake ..
 make
 ```
 
-This will create a container image called `hello-world.nbx` that we can then deploy to our device.  
+This step results in the creation of a [WASM](https://webassembly.org/) file named `hello-world.wasm`, which will be used by the Ocre CLI to create an Ocre container in the next step.
 
-![](BuildHelloWorld.jpg)
+**3.** Last, lets create an Ocre container using the Ocre CLI.
+
+{: .important}
+Steps to be updated soon
+
+___
+
+## Deploying the Hello World Sample to Your Device
+
+Now that you've built your container, let's get it running on your device.
+
+{: .important}
+Steps to be updated soon
 
 ---
-
-## Deploying the Hello World Sample
-The following steps will guide you to deploy the hello world sample to your device.
-
-1. To deploy the hello world sample, simply run the following in your terminal:
-```
-example code
-```
