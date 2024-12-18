@@ -83,7 +83,7 @@ west build -b native_sim ./application -d build -- -DMODULE_EXT_ROOT=`pwd`/appli
 ```
 
 {: .note}
-You can also run the **West Build** task directly from the **Ocre Workspace** file as defined in the [Setting Up Your Development Environment](../dev-environment) section. If you do, be sure to select `native_sim` as your build target. 
+You can also run the **West Build** task directly from the **Ocre Workspace** file as defined in the [Ocre Workspace File](../../../reference/workspacefile) reference. If you do, be sure to select `native_sim` as your build target from the dropdown list of available boards. 
 
 ### **7. Run the application**
 
