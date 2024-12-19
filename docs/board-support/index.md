@@ -2,7 +2,8 @@
 title: Board Support
 layout: default
 has_children: true
-nav_order: 6 
+nav_order: 6
+has_toc: false
 ---
 # Board Support
 The Ocre runtime supports various development boards, each offering different features and capabilities. 
@@ -17,11 +18,7 @@ The Ocre runtime supports various development boards, each offering different fe
 ---
 
 ## Using this Documentation
-1. First, select your board's manufacturer in the **sidebar** to review required tools and setup instructions specific to that manufacturer's development boards
-2. After installing the necessary tools, find your specific board's documentation for detailed hardware setup and flashing instructions
-
-{: .important}
-Make sure to review and install all required tools outlined in the manufacturer's page before proceeding to your specific board's instructions.
+Select your board's manufacturer in the **sidebar** to review required tools and setup instructions specific to that manufacturer's development boards
 
 ---
 
