@@ -10,7 +10,7 @@ nav_order: 2
 This guide covers building and flashing the Ocre runtime onto actual development boards. While simulated environments are great for initial testing, deploying to real hardware allows you to test your applications under authentic conditions and take advantage of board-specific features like sensors and networking capabilities.
 
 {: .note}
-Please refer to the "Building and Flashing the Ocre Runtime" section for your board in our in our [Board Support](../../../board-support) section for your boards name, as well as any additional setup instructions should you need them.
+Please refer to the **Building and Flashing the Ocre Runtime** section for your board in our in our [Board Support](../../../board-support) section for your boards name, as well as any additional setup instructions should you need them.
 
 ---
 
@@ -81,14 +81,12 @@ You can also run the **West Build** task directly from the **Ocre Workspace** fi
 
 To flash the Ocre Runtime to your device follow these steps:
 
-1. Connect your board to your computer.
-2. Open your [serial console](../../quickstart/prerequisites/serial-console/index.md), and connect to your board.
-1. Flash the application to your device:
+1. Connect your board to your computer and ensure it's recognized by your serial console. (See the **Connecting to the Device** section in the [board support](../../../board-support) guide for your specific board for more details.) 
+2. From your terminal, flash the application to your device:
    ```
    west flash
    ```
-
-After flashing, restart/reset your board to run the application. If successful, you should see the following output on your console:
+3. After flashing, restart/reset your board to run the application. If successful, you should see the following output on your console:
 
 ![](../success.png)
 
