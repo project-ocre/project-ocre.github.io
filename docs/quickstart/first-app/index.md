@@ -3,7 +3,8 @@ title: Your First Container
 layout: default
 parent: Quickstart
 nav_order: 3 
-has_children: true 
+has_children: true
+has_toc: false
 ---
 
 # Your First App
