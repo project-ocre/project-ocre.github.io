@@ -3,6 +3,7 @@ title: STMicroelectronics
 layout: default
 parent: Board Support
 has_children: true
+has_toc: false
 ---
 
 # STMicroelectronics
@@ -15,7 +16,7 @@ Before working with any STM32 board, you should install:
 
 ## Optional
 Some boards need other utilities and drivers to build and flash the Ocre runtime and can be found below.
-* **[openocd driver](https://openocd.org/)**: Openocd is an opensource on chip debugger, and the default flashing utility for some ST boards. 
+* **[openocd driver](https://openocd.org/)**: Openocd is an open-source on chip debugger, and the default flashing utility for some ST boards. 
 
 ## Supported Boards
 Select your board below for detailed setup and usage instructions.
