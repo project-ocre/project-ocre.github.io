@@ -33,22 +33,17 @@ In the diagram below, you can see many of the board's physical components:
 
 ## Connecting to the Device
 
-### Physical Connection
-The board has two micro-USB ports. Connect a micro-USB cable to the port labeled **STLINK-V3E USB port (CN8)** in the top right corner of the board. Once connected, power and debug LEDs should illuminate, indicating the board is ready for use.
-
-### Serial Connection
 To monitor your device's output:
-1. Open your preferred serial terminal application 
-2. Configure the following settings:
+1. Connect your board to your computer with a USB cable using the STLINK port (**CN8**) on your board.
+2. Open your preferred console application.
+3. Configure the following settings:
   * **Port**: Select the port where your device is connected
   * **Baud Rate**: 115200
   * **Data Bits**: 8
   * **Parity**: None
   * **Flow Control**: None
   * **Line Endings**: None
-
-{: .note}
-The device will appear as a USB serial port when properly connected. On Linux/macOS it will typically be `/dev/ttyACM0` or similar, on Windows it will be a COM port.
+4. Start the new connection.
 
 ---
 
