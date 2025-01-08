@@ -55,7 +55,7 @@ pip install west
 
 Now, initialize the `ocre-runtime` repo.
 ```
-west init -m git@github.com:project-ocre/ocre-runtime.git
+west init -m https://github.com/project-ocre/ocre-runtime.git 
 ```
 
 Lastly, update the repo with the `west` utility.
@@ -95,3 +95,9 @@ To run the application, simply run the following command:
 If successful, you should see the following output:
 
 ![](../success.png)
+
+---
+
+## Next Steps
+
+Now that you have successfully built and flashed the Ocre runtime to your device, you're ready to create your first Ocre application. Head over to [Your First Container](../../first-app) to get started building containerized applications.
