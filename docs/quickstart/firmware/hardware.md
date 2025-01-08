@@ -47,7 +47,7 @@ pip install west
 
 Now, initialize the `ocre-runtime` repo.
 ```
-west init -m git@github.com:project-ocre/ocre-runtime.git
+west init -m https://github.com/project-ocre/ocre-runtime.git 
 ```
 
 Lastly, update the repo with the `west` utility.
@@ -57,7 +57,7 @@ west update
 ```
 
 {: .note}
-`west update` may take 5-10 minutes as it pulls all Zephyr Project board sources.
+This step may take 5-10 minutes as it pulls all Zephyr Project board sources.
 
 ### **5. Install Additional Zephyr (pip) requirements**
 
@@ -75,7 +75,7 @@ west build -b BOARD_NAME ./application -d build -- -DMODULE_EXT_ROOT=`pwd`/appli
 ```
 
 {: .note}
-You can also run the **West Build** task directly from the **Ocre Workspace** file as defined in the [Ocre Workspace File](../../../reference/workspacefile) reference. If you do, be sure to select your board as your build target from the dropdown list of available boards. 
+Your board's name can be found in the Zephyr [Supported Boards](https://docs.zephyrproject.org/3.7.0/boards/index.html) guide.
 
 ### **7. Flash the Ocre Runtime to Your Device**
 
@@ -96,3 +96,9 @@ To flash the Ocre Runtime to your device follow these steps:
 This section covers common issues you might encounter when building and flashing the Ocre runtime to physical hardware, along with their solutions.
 
 - **Unsupported Board**: If you're unable to flash to your board, and it's not listed in our [Board Support](../../../board-support), check out our [Adding Board Support](../../../board-support/adding-support) guide under the Board Support section. This guide will walk you through the process of adding support for your specific hardware. 
+
+---
+
+## Next Steps
+
+Now that you have successfully built and flashed the Ocre runtime to your device, you're ready to create your first Ocre application. Head over to [Your First Container](../../first-app) to get started building containerized applications.

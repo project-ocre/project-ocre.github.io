@@ -7,7 +7,7 @@ has_children: true
 has_toc: false
 ---
 
-# Your First App
+# Your First Container 
 
 This section guides you through creating your first containerized application with Ocre. You'll set up a development environment and build a simple application that demonstrates Ocre's core capabilities.
 
@@ -15,7 +15,7 @@ This section guides you through creating your first containerized application wi
 
 ## Getting Started
 
-Begin by following our [Setting Up Your Development Environment](./dev-environment) guide to install and configure the necessary tools. This guide offers two approaches:
+Begin by following our [Setting Up Your Development Environment](./dev-environment) guide to install and configure the necessary tools. This guide offers *two* approaches:
 - Using Visual Studio Code with Dev Containers for an integrated IDE experience
 - Using Docker interactively for a command-line workflow
 

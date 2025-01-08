@@ -55,7 +55,7 @@ pip install west
 
 Now, initialize the `ocre-runtime` repo.
 ```
-west init -m git@github.com:project-ocre/ocre-runtime.git
+west init -m https://github.com/project-ocre/ocre-runtime.git 
 ```
 
 Lastly, update the repo with the `west` utility.
@@ -65,7 +65,7 @@ west update
 ```
 
 {: .note}
-`west update` may take 5-10 minutes as it pulls all Zephyr Project board sources.
+This step may take 5-10 minutes as it pulls all Zephyr Project board sources.
 
 ### **5. Install Additional Zephyr (pip) requirements**
 
@@ -95,3 +95,9 @@ To run the application, simply run the following command:
 If successful, you should see the following output:
 
 ![](../success.png)
+
+---
+
+## Next Steps
+
+Now that you have successfully built and flashed the Ocre runtime to your device, you're ready to create your first Ocre application. Head over to [Your First Container](../../first-app) to get started building containerized applications.
