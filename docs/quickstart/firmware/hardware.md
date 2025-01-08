@@ -57,7 +57,7 @@ west update
 ```
 
 {: .note}
-`west update` may take 5-10 minutes as it pulls all Zephyr Project board sources.
+This step may take 5-10 minutes as it pulls all Zephyr Project board sources.
 
 ### **5. Install Additional Zephyr (pip) requirements**
 
@@ -75,7 +75,7 @@ west build -b BOARD_NAME ./application -d build -- -DMODULE_EXT_ROOT=`pwd`/appli
 ```
 
 {: .note}
-You can also run the **West Build** task directly from the **Ocre Workspace** file as defined in the [Ocre Workspace File](../../../reference/workspacefile) reference. If you do, be sure to select your board as your build target from the dropdown list of available boards. 
+Your board's name can be found in the Zephyr [Supported Boards](https://docs.zephyrproject.org/3.7.0/boards/index.html) guide.
 
 ### **7. Flash the Ocre Runtime to Your Device**
 

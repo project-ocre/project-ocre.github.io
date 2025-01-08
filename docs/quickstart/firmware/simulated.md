@@ -65,7 +65,7 @@ west update
 ```
 
 {: .note}
-`west update` may take 5-10 minutes as it pulls all Zephyr Project board sources.
+This step may take 5-10 minutes as it pulls all Zephyr Project board sources.
 
 ### **5. Install Additional Zephyr (pip) requirements**
 
