@@ -7,11 +7,29 @@ has_children: true
 has_toc: false
 ---
 
-# Prerequisites
+# Prerequisites 
 
-What you’ll need to get started:
-1. A **Computer** running Windows, Mac or Linux with [Git](https://github.com/git-guides/install-git) and a [serial console](../prerequisites/serial-console) installed.
-2. **Development Board** (See the [supported boards](../../board-support) list).
-3. **USB Cable** for your development board.
+Before getting started with Ocre, you'll need a few key components ready to go. The runtime has specific hardware requirements to ensure optimal performance and functionality. We also require some basic development tools installed on your computer.
 
-Once the prerequisites are complete, proceed to the [Building and Flashing the Ocre Runtime](../firmware) section to build and install the Ocre runtime.
+---
+
+## Required Components
+
+1. **Development Board** that meets ALL of the following:
+  - Listed as a [supported board](../../board-support)
+  - Network connectivity (built-in or via external module)
+2. **USB Cable** compatible with your development board
+3. **Computer** with:
+  - **Operating System:** Windows, Mac, or Linux
+  - The following **utilities** installed:
+        - [Git](https://github.com/git-guides/install-git)
+        - A [Serial Console](../prerequisites/serial-console)
+
+{: .highlight}
+If your board isn't listed as supported but meets all of the mentioned requirements, board support can be added by following the [Adding Board Support](../../board-support/adding-support) guide.
+
+---
+
+## Next Steps
+
+Once you have everything above, continue to [Building and Flashing the Ocre Runtime](../firmware).
