@@ -24,7 +24,7 @@ cd samples/blinky
 **2.** Next, build the blinky sample using the following commands:
 ```
 mkdir build && cd build
-cmake -DWASI_SDK_DIR=/opt/wasi-sdk -DCMAKE_TOOLCHAIN_FILE=/opt/wamr-sdk/app-sdk/wamr_toolchain.cmake ..
+cmake ..
 make
 ```
 
