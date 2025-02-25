@@ -30,7 +30,7 @@ Let's build your first Ocre container using the "*hello-world*" sample applicati
 2. **Build the WASM Module**
   ```
   mkdir build && cd build
-  cmake -DWASI_SDK_DIR=/opt/wasi-sdk -DCMAKE_TOOLCHAIN_FILE=/opt/wamr-sdk/app-sdk/wamr_toolchain.cmake ..
+  cmake ..
   make
   ```
 
