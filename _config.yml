@@ -15,9 +15,12 @@ logo: "/assets/images/logo.png"
 enable_copy_code_button: true
 permalink: pretty
 
-# Heading anchors/TOC
+# TOC 
+toc_enabled: true
+toc:
+  min_level: 2  # Start with h2 (##)
+  max_level: 4  # End with h4 (####)
 heading_anchors: true
-toc: true
 
 ### Defaults paths/content types
 defaults:
