@@ -79,21 +79,21 @@ int ocre_timer_create(int id);
 
 **Parameters**:
 
-| Value | Description |
-| ------ | -----------|
-| `id` | Timer identifier (must be between `1` and `MAX_TIMERS`) |
+| Name | Type | Description |
+| ------ | ------ | ----------- |
+| `id` | *int* | Timer identifier (must be between `1` and `MAX_TIMERS`) |
 
 **Returns**:
 
 | Value | Description |
-| ------ | -----------|
+| ------ | ----------- |
 | `0` | on success |
 | `-1` | on error with errno set |
 
 **Errors**: 
 
 | Value | Description |
-| ------ | -----------|
+| ------ | ----------- |
 | `EINVAL` | Invalid timer ID or timer system not initialized |
 | `EEXIST` | Timer ID already in use |
 
@@ -107,23 +107,23 @@ int ocre_timer_start(ocre_timer_t id, int interval, int is_periodic);
 
 **Parameters**:
 
-| Value | Description |
-| ------ | -----------|
-| `id` | Timer identifier |
-| `interval` | Timer interval in milliseconds |
-| `is_periodic`| `1` for periodic timer, `0` for one-shot
+| Name | Type | Description |
+| ------ | ------ | ----------- |
+| `id` | *ocre_timer_t* | Timer identifier |
+| `interval` | *int* | Timer interval in milliseconds |
+| `is_periodic` | *int* | `1` for periodic timer, `0` for one-shot |
 
 **Returns**:
 
 | Value | Description |
-| ------ | -----------|
+| ------ | ----------- |
 | `0` | on success |
 | `-1` | on error with errno set |
 
 **Errors**:
 
 | Value | Description |
-| ------ | -----------|
+| ------ | ----------- |
 | `EINVAL` | Invalid timer ID, timer not found, or invalid interval |
 
 ### Stop Timer
@@ -136,21 +136,21 @@ int ocre_timer_stop(ocre_timer_t id);
 
 **Parameters**:
 
-| Value | Description |
-| ------ | -----------|
-| `id` | Timer identifier |
+| Name | Type | Description |
+| ------ | ------ | ----------- |
+| `id` | *ocre_timer_t* | Timer identifier |
 
 **Returns**:
 
 | Value | Description |
-| ------ | -----------|
+| ------ | ----------- |
 | `0` | on success |
 | `-1` | on error with errno set |
 
 **Errors**:
 
 | Value | Description |
-| ------ | -----------|
+| ------ | ----------- |
 | `EINVAL` | Invalid timer ID, timer not found, or invalid interval |
 
 ### Get Remaining Time
@@ -163,21 +163,21 @@ int ocre_timer_get_remaining(ocre_timer_t id);
 
 **Parameters**:
 
-| Value | Description |
-| ------ | -----------|
-| `id` | Timer identifier |
+| Name | Type | Description |
+| ------ | ------ | ----------- |
+| `id` | *ocre_timer_t* | Timer identifier |
 
 **Returns**:
 
 | Value | Description |
-| ------ | -----------|
-| `>= 0` | Remaining time in milliseconds|
+| ------ | ----------- |
+| `>= 0` | Remaining time in milliseconds |
 | `-1` | Error occurred (check errno) |
 
 **Errors**:
 
 | Value | Description |
-| ------ | -----------|
+| ------ | ----------- |
 | `EINVAL` | Invalid timer ID, timer not found, or invalid interval |
 
 ### Delete Timer
@@ -190,21 +190,21 @@ int ocre_timer_delete(ocre_timer_t id);
 
 **Parameters**:
 
-| Value | Description |
-| ------ | -----------|
-| `id` | Timer identifier |
+| Name | Type | Description |
+| ------ | ------ | ----------- |
+| `id` | *ocre_timer_t* | Timer identifier |
 
 **Returns**:
 
 | Value | Description |
-| ------ | -----------|
+| ------ | ----------- |
 | `0` | on success |
 | `-1` | on error with errno set |
 
 **Errors**:
 
 | Value | Description |
-| ------ | -----------|
+| ------ | ----------- |
 | `EINVAL` | Invalid timer ID, timer not found, or invalid interval |
 
 
@@ -216,9 +216,8 @@ Sets the WASM dispatcher function for timer callbacks. This function is used int
 void ocre_timer_set_dispatcher(void);
 ```
 
-:::info
+{: .note }
 This function is handled automatically by the Ocre runtime and is included here for completeness. Container applications should not call this function directly.
-:::
 
 ---
 ## Error Handling
@@ -228,7 +227,7 @@ All functions, except `ocre_timer_set_module_inst` and `ocre_timer_set_dispatche
 **Errors:**
 
 | Value | Description |
-| ------ | -----------|
+| ------ | ----------- |
 | `EINVAL` | Invalid timer ID or timer system not initialized |
 | `EEXIST` | Timer ID already in use |
 

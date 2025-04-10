@@ -145,14 +145,14 @@ int ocre_sensors_init(int unused);
 
 **Parameters**:
 
-| Value | Description |
-| ------ | -----------|
-| `unused` | Reserved parameter (not used) |
+| Name | Type | Description |
+| ------ | ------ | ----------- |
+| `unused` | *int* | Reserved parameter (not used) |
 
 **Returns**:
 
 | Value | Description |
-| ------ | -----------|
+| ------ | ----------- |
 | `0` | on success |
 | negative value | on error |
 
@@ -167,15 +167,15 @@ ocre_sensors_status_t ocre_sensors_discover_sensors(ocre_sensor_t *sensors, int 
 
 **Parameters**:
 
-| Value | Description |
-| ------ | -----------|
-| `sensors` | Pointer to the sensor list to store the discovered info about available sensors |
-| `sensors_count` | Pointer to variable to store the number of discovered sensors |
+| Name | Type | Description |
+| ------ | ------ | ----------- |
+| `sensors` | *ocre_sensor_t** | Pointer to the sensor list to store the discovered info about available sensors |
+| `sensors_count` | *int** | Pointer to variable to store the number of discovered sensors |
 
 **Returns**:
 
 | Value | Description |
-| ------ | -----------|
+| ------ | ----------- |
 | `SENSOR_API_STATUS_OK` | on success |
 | other status code | on error |
 
@@ -189,14 +189,14 @@ ocre_sensors_status_t ocre_sensors_open(ocre_sensor_handle_t *sensor_handle);
 
 **Parameters**:
 
-| Value | Description |
-| ------ | -----------|
-| `sensor_handle` | Pointer to the sensor handle to open |
+| Name | Type | Description |
+| ------ | ------ | ----------- |
+| `sensor_handle` | *ocre_sensor_handle_t** | Pointer to the sensor handle to open |
 
 **Returns**:
 
 | Value | Description |
-| ------ | -----------|
+| ------ | ----------- |
 | `SENSOR_API_STATUS_OK` | on success |
 | `SENSOR_API_STATUS_ERROR` | on error |
 
@@ -211,14 +211,14 @@ ocre_sensors_sample_t sensor_read_sample(ocre_sensor_handle_t *sensor_handle);
 
 **Parameters**:
 
-| Value | Description |
-| ------ | -----------|
-| `sensor_handle` | Pointer to the sensor handle to read from |
+| Name | Type | Description |
+| ------ | ------ | ----------- |
+| `sensor_handle` | *ocre_sensor_handle_t** | Pointer to the sensor handle to read from |
 
 **Returns**:
 
 | Value | Description |
-| ------ | -----------|
+| ------ | ----------- |
 | `ocre_sensors_sample_t` | A structure containing the sensor data sample |
 
 
@@ -232,20 +232,19 @@ ocre_sensor_value_t sensor_get_channel(ocre_sensors_sample_t sample, sensor_chan
 
 **Parameters**:
 
-| Value | Description |
-| ------ | -----------|
-| `sample` | The sensor sample containing raw data |
-| `channel` | The specific channel to retrieve data for (e.g., `SENSOR_CHANNEL_TEMPERATURE`) |
+| Name | Type | Description |
+| ------ | ------ | ----------- |
+| `sample` | *ocre_sensors_sample_t* | The sensor sample containing raw data |
+| `channel` | *sensor_channel_t* | The specific channel to retrieve data for (e.g., `SENSOR_CHANNEL_TEMPERATURE`) |
 
 **Returns**:
 
 | Value | Description |
-| ------ | -----------|
+| ------ | ----------- |
 | `ocre_sensor_value_t` | The value from the requested channel |
 
-:::note
+{: .note }
 If the channel is invalid or unavailable, the function may return an error code or placeholder value.
-:::
 
 ### Set Sensor Trigger
 
@@ -259,18 +258,18 @@ ocre_sensors_status_t ocre_sensors_set_trigger(ocre_sensor_handle_t sensor_handl
 
 **Parameters**:
 
-| Value | Description |
-| ------ | -----------|
-| `sensor_handle` | Handle of the sensor |
-| `channel` | Channel to set the trigger on |
-| `trigger_type` | Type of trigger (e.g., data ready, threshold) |
-| `callback` | Function to be called when trigger occurs |
-| `subscription_id` | Pointer to store the subscription ID |
+| Name | Type | Description |
+| ------ | ------ | ----------- |
+| `sensor_handle` | *ocre_sensor_handle_t* | Handle of the sensor |
+| `channel` | *sensor_channel_t* | Channel to set the trigger on |
+| `trigger_type` | *enum sensor_trigger_type* | Type of trigger (e.g., data ready, threshold) |
+| `callback` | *ocre_sensor_trigger_cb* | Function to be called when trigger occurs |
+| `subscription_id` | *int** | Pointer to store the subscription ID |
 
 **Returns**:
 
 | Value | Description |
-| ------ | -----------|
+| ------ | ----------- |
 | `SENSOR_API_STATUS_OK` | on success |
 | other status code | on error |
 
@@ -285,16 +284,16 @@ ocre_sensors_status_t ocre_sensors_clear_trigger(ocre_sensor_handle_t sensor_han
 
 **Parameters**:
 
-| Value | Description |
-| ------ | -----------|
-| `sensor_handle` | Handle of the sensor |
-| `channel` | The specific channel (e.g., `SENSOR_CHANNEL_TEMPERATURE`) from which the trigger should be removed |
-| `subscription_id` | ID of the subscription to remove |
+| Name | Type | Description |
+| ------ | ------ | ----------- |
+| `sensor_handle` | *ocre_sensor_handle_t* | Handle of the sensor |
+| `channel` | *sensor_channel_t* | The specific channel (e.g., `SENSOR_CHANNEL_TEMPERATURE`) from which the trigger should be removed |
+| `subscription_id` | *int* | ID of the subscription to remove |
 
 **Returns**:
 
 | Value | Description |
-| ------ | -----------|
+| ------ | ----------- |
 | `SENSOR_API_STATUS_OK` | on success |
 | other status code | on error |
 
@@ -310,7 +309,7 @@ ocre_sensors_status_t ocre_sensors_cleanup();
 **Returns**:
 
 | Value | Description |
-| ------ | -----------|
+| ------ | ----------- |
 | `SENSOR_API_STATUS_OK` | on success |
 | other status code | on error |
 
@@ -321,7 +320,7 @@ ocre_sensors_status_t ocre_sensors_cleanup();
 Most functions return status codes from the `ocre_sensors_status_t` enumeration. Check the return value to determine if an operation succeeded or failed.
 
 | Value | Description |
-| ------ | -----------|
+| ------ | ----------- |
 | `SENSOR_API_STATUS_OK` | Operation completed successfully |
 | `SENSOR_API_STATUS_ERROR` | General failure |
 | `SENSOR_API_STATUS_UNINITIALIZED` | API not initialized |
