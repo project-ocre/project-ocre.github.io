@@ -94,7 +94,12 @@ To run the application, simply run the following command:
 
 If successful, you should see the following output:
 
-![](../success.png)
+   ```sh
+   ocre:~$ 
+
+   Ocre runtime started
+   Hello world from Ocre.
+   ```
 
 ---
 
