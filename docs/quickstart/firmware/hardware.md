@@ -88,7 +88,12 @@ To flash the Ocre Runtime to your device follow these steps:
    ```
 3. After flashing, restart/reset your board to run the application. If successful, you should see the following output on your console:
 
-![](../success.png)
+   ```sh
+   ocre:~$ 
+
+   Ocre runtime started
+   Hello world from Ocre.
+   ```
 
 ---
 
