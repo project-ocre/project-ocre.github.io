@@ -58,7 +58,7 @@ typedef struct ocre_sensor_handle_t {
 } ocre_sensor_handle_t;
 ```
 
-The sensor handle contains a unique ID, device name, and a reference to the underlying device structure. It is used to reference a specific sensor in all operations.
+The sensor handle contains a unique `ID`, device name, and a reference to the underlying device structure. It is used to reference a specific sensor in all operations.
 
 ### Sensor Instance
 
@@ -169,8 +169,8 @@ ocre_sensors_status_t ocre_sensors_discover_sensors(ocre_sensor_t *sensors, int 
 
 | Name | Type | Description |
 | ------ | ------ | ----------- |
-| `sensors` | *ocre_sensor_t** | Pointer to the sensor list to store the discovered info about available sensors |
-| `sensors_count` | *int** | Pointer to variable to store the number of discovered sensors |
+| `sensors` | *ocre_sensor_t* * | Pointer to the sensor list to store the discovered info about available sensors |
+| `sensors_count` | *int* * | Pointer to variable to store the number of discovered sensors |
 
 **Returns**:
 
@@ -191,7 +191,7 @@ ocre_sensors_status_t ocre_sensors_open(ocre_sensor_handle_t *sensor_handle);
 
 | Name | Type | Description |
 | ------ | ------ | ----------- |
-| `sensor_handle` | *ocre_sensor_handle_t** | Pointer to the sensor handle to open |
+| `sensor_handle` | *ocre_sensor_handle_t* * | Pointer to the sensor handle to open |
 
 **Returns**:
 
@@ -213,7 +213,7 @@ ocre_sensors_sample_t sensor_read_sample(ocre_sensor_handle_t *sensor_handle);
 
 | Name | Type | Description |
 | ------ | ------ | ----------- |
-| `sensor_handle` | *ocre_sensor_handle_t** | Pointer to the sensor handle to read from |
+| `sensor_handle` | *ocre_sensor_handle_t* * | Pointer to the sensor handle to read from |
 
 **Returns**:
 
@@ -264,7 +264,7 @@ ocre_sensors_status_t ocre_sensors_set_trigger(ocre_sensor_handle_t sensor_handl
 | `channel` | *sensor_channel_t* | Channel to set the trigger on |
 | `trigger_type` | *enum sensor_trigger_type* | Type of trigger (e.g., data ready, threshold) |
 | `callback` | *ocre_sensor_trigger_cb* | Function to be called when trigger occurs |
-| `subscription_id` | *int** | Pointer to store the subscription ID |
+| `subscription_id` | *int* * | Pointer to store the subscription `ID` |
 
 **Returns**:
 
@@ -288,7 +288,7 @@ ocre_sensors_status_t ocre_sensors_clear_trigger(ocre_sensor_handle_t sensor_han
 | ------ | ------ | ----------- |
 | `sensor_handle` | *ocre_sensor_handle_t* | Handle of the sensor |
 | `channel` | *sensor_channel_t* | The specific channel (e.g., `SENSOR_CHANNEL_TEMPERATURE`) from which the trigger should be removed |
-| `subscription_id` | *int* | ID of the subscription to remove |
+| `subscription_id` | *int* | `ID` of the subscription to remove |
 
 **Returns**:
 
@@ -463,6 +463,6 @@ int main() {
 | [`ocre_sensors_open`](#open-sensor) | Opens sensor | `sensor_handle`: Sensor to open | Status code | `SENSOR_API_STATUS_OK`,<br/>`SENSOR_API_STATUS_ERROR` |
 | [`sensor_read_sample`](#read-sensor-sample) | Reads sensor data | `sensor_handle`: Sensor to read from | `ocre_sensors_sample_t` structure | N/A |
 | [`sensor_get_channel`](#get-sensor-channel) | Gets channel data | `sample`: Sensor sample<br/>`channel`: Channel to retrieve | `ocre_sensor_value_t` structure | N/A |
-| [`ocre_sensors_set_trigger`](#set-sensor-trigger) | Sets sensor trigger | `sensor_handle`: Target sensor<br/>`channel`: Target channel<br/>`trigger_type`: Trigger type<br/>`callback`: Callback function<br/>`subscription_id`: ID output | Status code | `SENSOR_API_STATUS_OK`,<br/>`SENSOR_API_STATUS_ERROR` |
+| [`ocre_sensors_set_trigger`](#set-sensor-trigger) | Sets sensor trigger | `sensor_handle`: Target sensor<br/>`channel`: Target channel<br/>`trigger_type`: Trigger type<br/>`callback`: Callback function<br/>`subscription_id`: `ID` output | Status code | `SENSOR_API_STATUS_OK`,<br/>`SENSOR_API_STATUS_ERROR` |
 | [`ocre_sensors_clear_trigger`](#clear-sensor-trigger) | Removes sensor trigger | `sensor_handle`: Target sensor<br/>`channel`: Target channel<br/>`subscription_id`: Subscription to remove | Status code | `SENSOR_API_STATUS_OK`,<br/>`SENSOR_API_STATUS_ERROR` |
 | [`ocre_sensors_cleanup`](#clean-up-sensor-environment) | Cleans up resources | None | Status code | `SENSOR_API_STATUS_OK`,<br/>`SENSOR_API_STATUS_ERROR` |
