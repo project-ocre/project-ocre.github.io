@@ -1,14 +1,14 @@
 ---
-title: Runtime
+title: Container Runtime
 layout: default
 parent: APIs
 has_toc: false 
 ---
 
-# Runtime API
+# Container Runtime API
 {: .no_toc }
 
-The Ocre Runtime API enables full container lifecycle management and can be integrated into various environments including real-time operating systems ([Zephyr](https://zephyrproject.org/), [FreeRTOS](https://www.freertos.org/)), Linux-based platforms (including [Yocto](https://www.yoctoproject.org/)), or custom firmware implementations. With these interfaces, platform developers can initialize the runtime, deploy containers, monitor their execution, and control their operation throughout the system lifecycle.
+The Ocre Container Runtime API enables full container lifecycle management and can be integrated into various environments including real-time operating systems ([Zephyr](https://zephyrproject.org/), [FreeRTOS](https://www.freertos.org/)), Linux-based platforms (including [Yocto](https://www.yoctoproject.org/)), or custom firmware implementations. With these interfaces, platform developers can initialize the runtime, deploy containers, monitor their execution, and control their operation throughout the system lifecycle.
 
 ---
 
