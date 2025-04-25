@@ -1,7 +1,7 @@
 ---
 title: GPIO
 layout: default
-parent: Container APIs
+parent: Container
 has_toc: false 
 ---
 

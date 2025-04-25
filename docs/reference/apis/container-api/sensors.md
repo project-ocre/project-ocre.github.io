@@ -1,7 +1,7 @@
 ---
 title: Sensors
 layout: default
-parent: Container APIs
+parent: Container
 ---
 
 # Sensors
