@@ -14,6 +14,12 @@ Container APIs provide direct interfaces for containers to efficiently interact 
 
 Below are the core APIs available for Ocre containers. Each API includes detailed documentation with usage examples, error handling patterns, and best practices.
 
+### Communication
+
+| API | Description|
+|-----|-------------|
+| **[Inter-Container Messaging](inter-container-messaging)** | Enable secure communication between containers |
+
 ### System Interaction
 
 | API | Description |
