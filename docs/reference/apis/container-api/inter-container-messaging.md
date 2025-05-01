@@ -88,7 +88,6 @@ Fails if the messaging system is not initialized, if `topic`, `content_type`, or
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| `exec_env` | *wasm_exec_env_t* | Currently unused but required for compatibility with WebAssembly runtime |
 | `topic` | *char* | Topic name to publish the message to |
 | `content_type` | *char* | Content type of the message (`MIME` type recommended) |
 | `payload` | *void* | Pointer to the **message payload buffer** |
@@ -113,7 +112,6 @@ int ocre_subscribe_message(char *topic, char *handler_name);
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| `exec_env` | *wasm_exec_env_t* | WebAssembly execution environment used to locate the callback function in the WebAssembly module. |
 | `topic` | *char* | Topic name to subscribe to |
 | `handler_name` | *char* | Name of the callback function to be called when a message is received |
 
@@ -150,11 +148,6 @@ The following example demonstrates how to use the Inter-Container Messaging API 
 *Two* containers work together:
 - The **[Publisher Container](#publisher-container)** sends JSON-formatted temperature readings to the `sensors/temperature` topic every 500 milliseconds.
 - The **[Subscriber Container](#subscriber-container)** subscribes to this topic and processes incoming messages.
-
-**Notes**:
-- The `wasm_exec_env_t` parameter is required for WebAssembly function signatures but may be unused in some cases (e.g., publishing). In real applications, it is provided by the WASM runtime.
-- Use `ocre_sleep` instead of POSIX `sleep`.
-- The messaging system automatically handles memory allocation and deallocation for messages passed to callback functions.
 
 ---
 
