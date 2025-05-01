@@ -19,7 +19,6 @@ Ocre provides *two* primary categories of APIs:
 
 2. **[Container Runtime API:](../apis/runtime-api)** The API for managing the Ocre container runtime environment itself, including container lifecycle operations. The Runtime API is intended for system implementors and integrators looking to incorporate the Ocre runtime into their own solutions. 
 
-
 ---
 
 ## Next Steps

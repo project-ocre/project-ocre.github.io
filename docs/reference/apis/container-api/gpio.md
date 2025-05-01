@@ -79,10 +79,6 @@ A function that will be called when a GPIO pin's state changes.
 typedef void (*ocre_gpio_callback_t)(int pin, ocre_gpio_pin_state_t state);
 ```
 
-### Execution Environment
-
-All GPIO functions have an internal `wasm_exec_env_t` parameter that is used by the Ocre runtime. This parameter is NOT needed when calling these functions from within a container. Container applications should omit this parameter.
-
 ---
 
 ## Methods
@@ -231,28 +227,6 @@ int ocre_gpio_unregister_callback(int pin);
 | `0` | on success |
 | negative value | on error |
 
-### Get Pin ID
-
-Calculates a pin ID from port and pin numbers.
-
-```c
-int get_pin_id(int port, int pin);
-```
-
-**Parameters**:
-
-| Name | Type | Description |
-| ------ | ------ | ----------- |
-| `port` | *int* | GPIO port number |
-| `pin` | *int* | Pin number within the port |
-
-**Returns**:
-
-| Value | Description |
-| ------ | ----------- |
-| positive value (pin ID) | on success |
-| `-1` | on error |
-
 ---
 
 ## Error Handling
@@ -380,52 +354,6 @@ int main() {
 }
 ```
 
-### Using Port and Pin Mapping
-
-```c
-#include <stdio.h>
-#include "ocre_gpio.h"
-
-#define GPIO_PORT_A 0
-#define GPIO_PIN_5  5
-
-int main() {
-    // Initialize GPIO subsystem
-    if (ocre_gpio_init() != 0) {
-        printf("Failed to initialize GPIO\n");
-        return -1;
-    }
-    
-    // Calculate pin ID from port and pin
-    int pin_id = get_pin_id(GPIO_PORT_A, GPIO_PIN_5);
-    if (pin_id < 0) {
-        printf("Invalid port or pin\n");
-        return -1;
-    }
-    
-    // Configure the pin as output
-    ocre_gpio_config_t config;
-    config.pin = pin_id;
-    config.direction = OCRE_GPIO_DIR_OUTPUT;
-    
-    if (ocre_gpio_configure(&config) != 0) {
-        printf("Failed to configure GPIO pin\n");
-        return -1;
-    }
-    
-    // Toggle the pin 10 times
-    for (int i = 0; i < 10; i++) {
-        ocre_gpio_pin_toggle(pin_id);
-        printf("Pin toggled\n");
-        
-        // Delay (implementation-specific)
-        for (volatile int j = 0; j < 500000; j++);
-    }
-    
-    return 0;
-}
-```
-
 ---
 
 ## Reference
@@ -439,4 +367,3 @@ int main() {
 | [`ocre_gpio_pin_toggle`](#toggle-gpio-pin) | Toggles a GPIO pin state | `pin`: GPIO pin number | `0` on success, negative on error | `ENODEV`, `EINVAL` |
 | [`ocre_gpio_register_callback`](#register-gpio-callback) | Registers callback for GPIO changes | `pin`: GPIO pin number<br/>`callback`: Callback function | `0` on success, negative on error | `ENODEV`, `EINVAL` |
 | [`ocre_gpio_unregister_callback`](#unregister-gpio-callback) | Removes GPIO callback | `pin`: GPIO pin number | `0` on success, negative on error | `ENODEV`, `EINVAL` |
-| [`get_pin_id`](#get-pin-id) | Calculates pin ID from port and pin | `port`: GPIO port number<br/>`pin`: Pin number within port | Pin ID or `-1` on invalid Pin | N/A |

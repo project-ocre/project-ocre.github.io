@@ -35,6 +35,12 @@ Navigate this comprehensive API reference using the links below.
 
 ---
 
+## Execution Environment
+
+All sensor functions have an internal `wasm_exec_env_t` parameter that is used by the Ocre runtime. This parameter is NOT needed when calling these functions from within a container. Container applications should omit this parameter.
+
+---
+
 ## Types
 
 ### Sensor Callback Function
@@ -126,10 +132,6 @@ typedef enum {
     SENSOR_API_STATUS_ERROR           ///< An error occurred
 } ocre_sensors_status_t;
 ```
-
-### Execution Environment
-
-All sensor functions have an internal `wasm_exec_env_t` parameter that is used by the Ocre runtime. This parameter is NOT needed when calling these functions from within a container. Container applications should omit this parameter.
 
 ---
 
