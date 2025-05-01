@@ -36,6 +36,13 @@ Navigate this comprehensive API reference using the links below.
 
 ---
 
+
+## Execution Environment
+
+All messaging functions have an internal `wasm_exec_env_t` parameter that is used by the Ocre runtime. This parameter is NOT needed when calling these functions from within a container. Container applications should omit this parameter.
+
+---
+
 ## Types
 
 ### Message Structure
@@ -72,7 +79,7 @@ void ocre_msg_system_init(void);
 Publishes a message to the specified topic.
 
 ```c
-int ocre_publish_message(wasm_exec_env_t exec_env, char *topic, char *content_type, void *payload, int payload_len);
+int ocre_publish_message(char *topic, char *content_type, void *payload, int payload_len);
 ```
 
 Fails if the messaging system is not initialized, if `topic`, `content_type`, or `payload` is `NULL`/empty, if `payload_len` is `0`, or if the message queue is full.
@@ -99,7 +106,7 @@ Fails if the messaging system is not initialized, if `topic`, `content_type`, or
 Subscribes to a topic to receive messages.
 
 ```c
-int ocre_subscribe_message(wasm_exec_env_t exec_env, char *topic, char *handler_name);
+int ocre_subscribe_message(char *topic, char *handler_name);
 ```
 
 **Parameters**:
@@ -218,7 +225,7 @@ int main(void) {
 // Message handler function (exported for WASM)
 __attribute__((export_name("temperature_handler")))
 
-void temperature_handler(wasm_exec_env_t exec_env, ocre_msg_t *msg) {
+void temperature_handler(ocre_msg_t *msg) {
     printf("Received message on topic: %s\n", msg->topic);
     printf("Content type: %s\n", msg->content_type);
     printf("Payload: %s\n", (char *)msg->payload);

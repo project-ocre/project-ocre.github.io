@@ -35,6 +35,12 @@ Navigate this comprehensive API reference using the links below.
 
 ---
 
+## Execution Environment 
+
+All timer functions have an internal `wasm_exec_env_t` parameter that is used by the Ocre runtime. This parameter is NOT needed when calling these functions from within a container. Container applications should omit this parameter.
+
+---
+
 ## Types 
 
 ### Timer Callback Function
@@ -52,10 +58,6 @@ typedef int ocre_timer_t;
 ```
 
 Each timer is assigned a unique ID between `1` and `MAX_TIMERS`, which is used to reference the timer in all operations after creation. The timer handle is an opaque identifier that abstracts the underlying timer implementation.
-
-### Execution Environment 
-
-All timer functions have an internal `wasm_exec_env_t` parameter that is used by the Ocre runtime. This parameter is NOT needed when calling these functions from within a container. Container applications should omit this parameter.
 
 ---
 
