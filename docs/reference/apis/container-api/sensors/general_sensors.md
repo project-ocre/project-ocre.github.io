@@ -1,10 +1,10 @@
 ---
-title: Sensors
+title: General Sensors
 layout: default
-parent: Container
+parent: Sensors 
 ---
 
-# Sensors
+# General Sensors
 {: .no_toc }
 
 The Sensors API provides a unified interface for discovering, configuring, and retrieving data from various hardware sensors in Ocre containers. It supports multiple sensor types and channels, allowing applications to interact with environmental, motion, and position sensing capabilities.
