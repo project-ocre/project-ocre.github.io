@@ -46,7 +46,7 @@ Ocre uses MCUBoot as a boot-loader, therefore it requires setting up the flash p
 | `slot0_partition` | 256k | Primary slot for image 0 |
 | `slot1_partition` | 256k | Secondary slot for image 0 |
 | `storage_partition` | 8k | Storage for custom Zephyr functions |
-| `user_data` | Remaining memory | Storage for Ocre container definitions and images |
+| `user_data_partition` | Remaining memory | Storage for Ocre container definitions and images |
 
 {: .note}
 Not all boards will require you to define *all* the above partitions in the `.overlay` file, as their `.dts` file may already define them. Please refer to your boards `.dts` file beforehand and only define (or modify) partitions if they're needed.
